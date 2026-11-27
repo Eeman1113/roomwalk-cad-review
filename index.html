@@ -20,7 +20,7 @@
     </div>
     <div class="tb-cell">
       <div class="tb-k">Checker</div>
-      <input id="checker" placeholder="your name" style="background:var(--sunk);border:1px solid var(--line);border-radius:5px;padding:3px 7px;font-size:12.5px;width:130px">
+      <input id="checker" class="input" placeholder="your name" style="width:132px">
     </div>
     <div class="tb-cell progress-wrap">
       <div class="tb-k">Progress</div>
@@ -30,7 +30,7 @@
     <div class="tb-cell tb-actions">
       <button class="btn primary" id="exportCsv">Export CSV</button>
       <button class="btn" id="importCsv">Import CSV</button>
-      <button class="btn icon" id="themeBtn" title="Switch theme">&#9681;</button>
+      <button class="btn" id="themeBtn" title="Switch theme">Auto</button>
       <button class="btn icon" id="helpBtn" title="Keyboard shortcuts">?</button>
       <input type="file" id="csvFile" accept=".csv,text/csv" hidden>
     </div>
@@ -67,7 +67,7 @@
 
         <div class="spacer"></div>
 
-        <button class="btn" id="lockBtn" aria-pressed="true" title="Zoom and pan both panes together (L)">&#128279; Panes locked</button>
+        <button class="btn" id="lockBtn" aria-pressed="true" title="Zoom and pan both panes together (L)">Panes locked</button>
 
         <div class="seg" role="group" aria-label="Zoom">
           <button id="zOut" title="Zoom out (-)">&minus;</button>
@@ -82,7 +82,7 @@
           <button id="nextBtn" title="Next case (&rarr;)">&rarr;</button>
           <button id="todoBtn" title="Next unreviewed (U)">Next unreviewed</button>
         </div>
-        <button class="btn icon" id="reviewToggle" title="Hide the review column">&#9654;|</button>
+        <button class="btn" id="reviewToggle" title="Hide the review column">Hide review</button>
       </div>
 
       <div class="panes" id="panes">

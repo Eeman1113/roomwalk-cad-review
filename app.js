@@ -419,7 +419,7 @@
   function setLock(v) {
     state.ui.lock = v;
     $("lockBtn").setAttribute("aria-pressed", String(v));
-    $("lockBtn").innerHTML = v ? "🔗 Panes locked" : "⛓ Panes free";
+    $("lockBtn").textContent = v ? "Panes locked" : "Panes free";
     if (v) { views.B = { z: views.A.z, x: views.A.x, y: views.A.y }; applyView("B"); }
     markDirty();
   }
@@ -535,7 +535,7 @@
     else document.documentElement.removeAttribute("data-theme");
     var b = $("themeBtn");
     if (!b) return;
-    b.textContent = state.ui.theme === "dark" ? "\u25D1 Dark" : state.ui.theme === "light" ? "\u25D0 Light" : "\u25D1 Auto";
+    b.textContent = state.ui.theme === "dark" ? "Dark" : state.ui.theme === "light" ? "Light" : "Auto";
     b.title = "Theme: " + (state.ui.theme || "following the system") + " \u2014 click to change";
   }
 
@@ -582,7 +582,7 @@
     $("reviewToggle").onclick = function () {
       state.ui.review = !state.ui.review;
       $("main").classList.toggle("hide-review", !state.ui.review);
-      this.innerHTML = state.ui.review ? "▶|" : "|◀";
+      this.textContent = state.ui.review ? "Hide review" : "Show review";
       markDirty();
       setTimeout(fitAll, 0);
     };
@@ -677,7 +677,7 @@
       wire();
       $("main").classList.toggle("hide-review", !state.ui.review);
       $("lockBtn").setAttribute("aria-pressed", String(state.ui.lock));
-      $("lockBtn").innerHTML = state.ui.lock ? "🔗 Panes locked" : "⛓ Panes free";
+      $("lockBtn").textContent = state.ui.lock ? "Panes locked" : "Panes free";
       $("opacity").value = state.ui.opacity;
       setMode(state.ui.mode);
       renderProgress();
