@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 <div id="app">
@@ -37,6 +37,10 @@
   </header>
 
   <main id="main">
+
+    <button class="edge edge-l" id="edgeL" title="Show the case list (Z or [)" aria-label="Show the case list">
+      <span class="chev">&#9654;</span><span class="edge-t">Case list</span>
+    </button>
 
     <aside class="index">
       <div class="index-hd">
@@ -83,8 +87,12 @@
           <button id="todoBtn" title="Next unreviewed (U)">Next unreviewed</button>
         </div>
         <button class="btn" id="wheelBtn" title="What a plain scroll does">Wheel: auto</button>
-        <button class="btn" id="indexToggle" aria-pressed="true" title="Hide the case list ([)">Hide list</button>
-        <button class="btn" id="reviewToggle" title="Hide the review column (])">Hide review</button>
+
+        <div class="seg panels" role="group" aria-label="Panels">
+          <button id="indexToggle" aria-pressed="true" title="The case list down the left ([)">&#9664; Case list</button>
+          <button id="reviewToggle" aria-pressed="true" title="The review form down the right (])">Review form &#9654;</button>
+          <button id="focusBtn" title="Hide both panels and give the drawings the whole width (Z)">Focus <kbd>Z</kbd></button>
+        </div>
       </div>
 
       <div class="panes" id="panes">
@@ -139,6 +147,10 @@
       </div>
     </aside>
 
+    <button class="edge edge-r" id="edgeR" title="Show the review form (Z or ])" aria-label="Show the review form">
+      <span class="chev">&#9664;</span><span class="edge-t">Review form</span>
+    </button>
+
   </main>
 
   <footer class="status">
@@ -147,7 +159,7 @@
     <button class="chipbtn" id="aboutBtn">About this set</button>
     <span class="spacer"></span>
     <span class="keys">
-      <span>&larr;/&rarr; case</span><span>1/2/3 verdict</span><span>S/O/F view</span><span id="gestureKeys">scroll or pinch zooms</span><span>? keys</span>
+      <span>&larr;/&rarr; case</span><span>1/2/3 verdict</span><span>S/O/F view</span><span id="gestureKeys">scroll or pinch zooms</span><span>Z focus</span><span>? keys</span>
     </span>
   </footer>
 </div>
@@ -165,7 +177,9 @@
       <tr><td>+ / &minus;</td><td>Zoom in / out</td></tr>
       <tr><td>0</td><td>Fit the whole plan</td></tr>
       <tr><td>9</td><td>Actual pixels, 1:1</td></tr>
-      <tr><td>[ / ]</td><td>Hide or show the case list / the review column</td></tr>
+      <tr><td>Z</td><td>Focus: hide both side panels, or bring them back</td></tr>
+      <tr><td>[ / ]</td><td>Hide or show the case list / the review form on its own</td></tr>
+      <tr><td>Esc</td><td>With both panels hidden, bring them back</td></tr>
       <tr><td>Mouse wheel</td><td>Zoom at the pointer</td></tr>
       <tr><td>Pinch</td><td>Zoom at the pointer, on a trackpad</td></tr>
       <tr><td>Two fingers</td><td>Pan. Dragging with the pointer pans too.</td></tr>
@@ -193,6 +207,6 @@
   <div class="foot"><button class="btn primary" id="aboutClose">Close</button></div>
 </dialog>
 
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

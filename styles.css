@@ -300,15 +300,50 @@ main {
 
 /* Each column is placed by hand. A hidden panel removes an item from the flow,
    and auto-placement would then slide the stage into the collapsed column. */
-.index { grid-column: 1; }
-.stage { grid-column: 2; }
-.review { grid-column: 3; }
+.index { grid-column: 1; grid-row: 1; }
+.stage { grid-column: 2; grid-row: 1; }
+.review { grid-column: 3; grid-row: 1; }
 
-main.hide-review { grid-template-columns: 248px minmax(0, 1fr) 0; }
+/* A hidden panel leaves a 16px strip behind rather than vanishing: there is
+   then always something visible to click to get it back. */
+main.hide-review { grid-template-columns: 248px minmax(0, 1fr) 16px; }
 main.hide-review .review { display: none; }
-main.hide-index { grid-template-columns: 0 minmax(0, 1fr) 340px; }
+main.hide-review #edgeR { display: flex; }
+main.hide-index { grid-template-columns: 16px minmax(0, 1fr) 340px; }
 main.hide-index .index { display: none; }
-main.hide-index.hide-review { grid-template-columns: 0 minmax(0, 1fr) 0; }
+main.hide-index #edgeL { display: flex; }
+main.hide-index.hide-review { grid-template-columns: 16px minmax(0, 1fr) 16px; }
+
+.edge {
+  display: none;
+  grid-row: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--muted);
+  border: 0;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1;
+  transition: background-color .12s ease, color .12s ease;
+}
+
+.edge:hover { background: var(--accent); color: var(--foreground); }
+.edge-l { grid-column: 1; border-right: 1px solid var(--border); }
+.edge-r { grid-column: 3; border-left: 1px solid var(--border); }
+.edge .chev { font-size: 8px; }
+
+/* The label reads up the strip, so 16px is enough to name what comes back. */
+.edge-t {
+  writing-mode: vertical-rl;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.edge-l .edge-t { transform: rotate(180deg); margin: 0 0 8px; }
 
 /* ---------- case index ---------- */
 
@@ -455,6 +490,9 @@ main.hide-index.hide-review { grid-template-columns: 0 minmax(0, 1fr) 0; }
 }
 
 .stage-bar .spacer { flex: 1; }
+
+/* Layout toggles, not view modes: a rule keeps them apart from the rest. */
+.seg.panels { margin-left: 4px; padding-left: 12px; border-left: 1px solid var(--border); }
 
 .zoomread {
   font-family: var(--mono);
@@ -856,12 +894,16 @@ dialog .foot { padding: 16px 24px 20px; display: flex; gap: 8px; justify-content
 
 @media (max-width: 1500px) {
   main { grid-template-columns: 216px minmax(0, 1fr) 312px; }
-  main.hide-index { grid-template-columns: 0 minmax(0, 1fr) 312px; }
+  main.hide-index { grid-template-columns: 16px minmax(0, 1fr) 312px; }
+  main.hide-review { grid-template-columns: 216px minmax(0, 1fr) 16px; }
+  main.hide-index.hide-review { grid-template-columns: 16px minmax(0, 1fr) 16px; }
 }
 
 @media (max-width: 1240px) {
   main { grid-template-columns: 200px minmax(0, 1fr) 296px; }
-  main.hide-index { grid-template-columns: 0 minmax(0, 1fr) 296px; }
+  main.hide-index { grid-template-columns: 16px minmax(0, 1fr) 296px; }
+  main.hide-review { grid-template-columns: 200px minmax(0, 1fr) 16px; }
+  main.hide-index.hide-review { grid-template-columns: 16px minmax(0, 1fr) 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

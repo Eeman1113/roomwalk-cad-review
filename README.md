@@ -36,7 +36,8 @@ pages (Lily, Tulip, Rose).
 | `Space` | in flip view, swap plan and CAD |
 | `L` | lock or unlock the two panes' zoom and pan |
 | `+` `−` `0` `9` | zoom in / out / fit / actual pixels |
-| `[` `]` | hide or show the case list / the review column |
+| `Z` | focus: hide both side panels, or bring them back |
+| `[` `]` | hide or show the case list / the review form on its own |
 | mouse wheel, pinch | zoom at the pointer |
 | two fingers, drag | pan |
 

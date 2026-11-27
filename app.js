@@ -589,13 +589,26 @@
     fitAll();
   }
 
-  function setIndex(v) {
-    state.ui.index = v;
-    $("main").classList.toggle("hide-index", !v);
-    $("indexToggle").textContent = v ? "Hide list" : "Show list";
-    $("indexToggle").setAttribute("aria-pressed", String(v));
+  /* Both panels through one function, so a hidden panel always leaves its edge
+     strip behind and the Focus button always says what it will do next. */
+  function setPanels(index, review) {
+    state.ui.index = index;
+    state.ui.review = review;
+    var m = $("main");
+    m.classList.toggle("hide-index", !index);
+    m.classList.toggle("hide-review", !review);
+    $("indexToggle").setAttribute("aria-pressed", String(index));
+    $("reviewToggle").setAttribute("aria-pressed", String(review));
+    var both = !index && !review;
+    $("focusBtn").setAttribute("aria-pressed", String(both));
+    $("focusBtn").innerHTML = (both ? "Show panels " : "Focus ") + "<kbd>Z</kbd>";
     markDirty();
     requestAnimationFrame(fitAll);
+  }
+
+  function toggleFocus() {
+    var both = !state.ui.index && !state.ui.review;
+    setPanels(both, both);
   }
 
   function setLock(v) {
@@ -761,18 +774,14 @@
     $("nextBtn").onclick = function () { go(cur + 1); };
     $("todoBtn").onclick = nextUnreviewed;
 
-    $("indexToggle").onclick = function () { setIndex(!state.ui.index); };
+    $("indexToggle").onclick = function () { setPanels(!state.ui.index, state.ui.review); };
+    $("reviewToggle").onclick = function () { setPanels(state.ui.index, !state.ui.review); };
+    $("focusBtn").onclick = toggleFocus;
+    $("edgeL").onclick = function () { setPanels(true, state.ui.review); };
+    $("edgeR").onclick = function () { setPanels(state.ui.index, true); };
 
     $("wheelBtn").onclick = function () {
       setWheelMode({ auto: "zoom", zoom: "pan", pan: "auto" }[state.ui.wheel] || "auto");
-    };
-
-    $("reviewToggle").onclick = function () {
-      state.ui.review = !state.ui.review;
-      $("main").classList.toggle("hide-review", !state.ui.review);
-      this.textContent = state.ui.review ? "Hide review" : "Show review";
-      markDirty();
-      setTimeout(fitAll, 0);
     };
 
     $("checker").addEventListener("input", function () { state.checker = this.value; markDirty(); });
@@ -822,6 +831,7 @@
         if (e.key === "Escape") t.blur();
         return;
       }
+      if (e.key === "Escape" && !state.ui.index && !state.ui.review) { setPanels(true, true); return; }
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       var k = e.key;
       if (k === "ArrowRight" || k === "j") { go(cur + 1); e.preventDefault(); }
@@ -845,8 +855,9 @@
       else if (k === "-" || k === "_") zoomCentre(1 / 1.3);
       else if (k === "0") fitAll();
       else if (k === "9") oneToOne();
-      else if (k === "[") { setIndex(!state.ui.index); }
-      else if (k === "]") { $("reviewToggle").click(); }
+      else if (k === "z" || k === "Z") { toggleFocus(); }
+      else if (k === "[") { setPanels(!state.ui.index, state.ui.review); }
+      else if (k === "]") { setPanels(state.ui.index, !state.ui.review); }
       else if (k === "/") { $("notes").focus(); e.preventDefault(); }
       else if (k === "?") $("helpDlg").showModal();
     });
@@ -865,9 +876,7 @@
       buildTicks();
       buildAbout();
       wire();
-      $("main").classList.toggle("hide-review", !state.ui.review);
-      $("reviewToggle").textContent = state.ui.review ? "Hide review" : "Show review";
-      setIndex(state.ui.index !== false);
+      setPanels(state.ui.index !== false, state.ui.review !== false);
       paintWheelHint();
       $("lockBtn").setAttribute("aria-pressed", String(state.ui.lock));
       $("lockBtn").textContent = state.ui.lock ? "Panes locked" : "Panes free";
