@@ -38,6 +38,7 @@ pages (Lily, Tulip, Rose).
 | `+` `−` `0` `9` | zoom in / out / fit / actual pixels |
 | scroll, drag | zoom at the pointer, pan |
 | `/` | jump to the notes box |
+| `?` | the full list, plus what these drawings are |
 
 The two panes are **locked together** by default, so a wall in one pane sits at
 the same screen position as the same wall in the other. In overlay the drawing is
