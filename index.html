@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoomWalk CAD Check</title>
+<meta name="description" content="Check each generated CAD drawing against the brochure plan it came from, case by case, and write down what is missing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2315548f'/%3E%3Cpath d='M7 25V7h10v18M17 13h8v12h-8' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+
+  <header class="titleblock">
+    <div class="tb-cell">
+      <div class="tb-title">RoomWalk CAD check
+        <small>Generated drawing vs. the brochure plan it came from</small>
+      </div>
+    </div>
+    <div class="tb-cell tb-grow">
+      <div class="tb-k">What you are checking</div>
+      <div class="tb-note">
+        Every drawing here was produced by the <b>classical, no-AI reader</b> &mdash; the code that
+        actually ships. <b>There is no trained model involved:</b> no PlanNet checkpoint exists on
+        disk, and the two toy checkpoints that do are far worse than this reader. So judge the
+        drawing, not a model.
+      </div>
+    </div>
+    <div class="tb-cell">
+      <div class="tb-k">Checker</div>
+      <input id="checker" placeholder="your name" style="background:var(--sunk);border:1px solid var(--line);border-radius:5px;padding:3px 7px;font-size:12.5px;width:130px">
+    </div>
+    <div class="tb-cell progress-wrap">
+      <div class="tb-k">Progress</div>
+      <div class="tb-v" id="progressText">0 of 40 reviewed</div>
+      <div class="bar"><i id="progressBar" style="width:0%"></i></div>
+    </div>
+    <div class="tb-cell tb-actions">
+      <button class="btn primary" id="exportCsv">Export CSV</button>
+      <button class="btn" id="importCsv">Import CSV</button>
+      <button class="btn icon" id="themeBtn" title="Switch theme">&#9681;</button>
+      <button class="btn icon" id="helpBtn" title="Keyboard shortcuts">?</button>
+      <input type="file" id="csvFile" accept=".csv,text/csv" hidden>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <aside class="index">
+      <div class="index-hd">
+        <input type="search" id="search" placeholder="Filter by block, floor or flat">
+        <div class="filters">
+          <button class="chipbtn" data-filter="all" aria-pressed="true">All</button>
+          <button class="chipbtn" data-filter="todo" aria-pressed="false">Unreviewed</button>
+          <button class="chipbtn" data-filter="done" aria-pressed="false">Reviewed</button>
+          <button class="chipbtn" data-filter="failed" aria-pressed="false">No CAD</button>
+        </div>
+      </div>
+      <div class="grouphd" id="indexCount">40 cases</div>
+      <div class="index-list" id="indexList"></div>
+    </aside>
+
+    <section class="stage">
+      <div class="stage-bar">
+        <div class="seg" role="group" aria-label="View">
+          <button id="mSide" aria-pressed="true">Side by side <kbd>S</kbd></button>
+          <button id="mOver" aria-pressed="false">Overlay <kbd>O</kbd></button>
+          <button id="mFlip" aria-pressed="false">Flip <kbd>F</kbd></button>
+        </div>
+
+        <div class="slider" id="opacityWrap" hidden>
+          <label for="opacity">CAD over plan</label>
+          <input type="range" id="opacity" min="0" max="100" value="75">
+        </div>
+
+        <div class="spacer"></div>
+
+        <button class="btn" id="lockBtn" aria-pressed="true" title="Zoom and pan both panes together (L)">&#128279; Panes locked</button>
+
+        <div class="seg" role="group" aria-label="Zoom">
+          <button id="zOut" title="Zoom out (-)">&minus;</button>
+          <button id="zIn" title="Zoom in (+)">+</button>
+          <button id="zFit" title="Fit (0)">Fit</button>
+          <button id="zOne" title="Actual pixels (9)">1:1</button>
+        </div>
+        <span class="zoomread" id="zoomRead">100%</span>
+
+        <div class="seg" role="group" aria-label="Case">
+          <button id="prevBtn" title="Previous case (&larr;)">&larr;</button>
+          <button id="nextBtn" title="Next case (&rarr;)">&rarr;</button>
+          <button id="todoBtn" title="Next unreviewed (U)">Next unreviewed</button>
+        </div>
+        <button class="btn icon" id="reviewToggle" title="Hide the review column">&#9654;|</button>
+      </div>
+
+      <div class="panes" id="panes">
+        <div class="pane primary">
+          <div class="pane-hd"><span id="hdA">Brochure plan</span><span class="meta" id="metaA"></span></div>
+          <div class="vp" id="vpA"><div class="canvas" id="cvA"></div></div>
+        </div>
+        <div class="pane secondary cad">
+          <div class="pane-hd"><span id="hdB">Generated CAD</span><span class="meta" id="metaB"></span></div>
+          <div class="vp" id="vpB"><div class="canvas" id="cvB"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="review" id="review">
+      <div class="rv-hd">
+        <div class="case" id="rvCase">&mdash;</div>
+        <div class="sub" id="rvSub"></div>
+      </div>
+
+      <div class="rv-sec">
+        <h3>Verdict</h3>
+        <div class="verdicts">
+          <label class="verdict v-good"><input type="radio" name="verdict" value="good"><span class="lab">Good &mdash; usable as is</span><span class="hint">1</span></label>
+          <label class="verdict v-minor"><input type="radio" name="verdict" value="minor"><span class="lab">Minor issues &mdash; fixable</span><span class="hint">2</span></label>
+          <label class="verdict v-unusable"><input type="radio" name="verdict" value="unusable"><span class="lab">Unusable</span><span class="hint">3</span></label>
+        </div>
+      </div>
+
+      <div class="rv-sec">
+        <h3>What is wrong (tick all that apply)</h3>
+        <div class="ticks" id="ticks"></div>
+      </div>
+
+      <div class="rv-sec">
+        <h3>What is missing &mdash; in your words</h3>
+        <textarea id="notes" placeholder="e.g. the kitchen and the corridor are drawn as one room; the 3'9&quot; balcony is absent; the entrance door is on the wrong wall."></textarea>
+      </div>
+
+      <div class="rv-sec">
+        <details class="facts-d" id="factsRooms">
+          <summary>Rooms: printed on the plan vs. drawn in the CAD</summary>
+          <div class="facts" id="roomsFacts"></div>
+        </details>
+      </div>
+
+      <div class="rv-sec">
+        <details class="facts-d">
+          <summary>What the generator itself reported</summary>
+          <div class="facts" id="selfFacts"></div>
+        </details>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="status">
+    <span class="saved" id="savedFlag"><i></i><span id="savedText">Saved</span></span>
+    <span id="statusCount"></span>
+    <button class="chipbtn" id="aboutBtn">About this set</button>
+    <span class="spacer"></span>
+    <span class="keys">
+      <span>&larr;/&rarr; case</span><span>U next unreviewed</span><span>1/2/3 verdict</span>
+      <span>S/O/F view</span><span>L lock</span><span>scroll = zoom</span><span>/ notes</span><span>? help</span>
+    </span>
+  </footer>
+</div>
+
+<dialog id="helpDlg">
+  <h2>Keyboard</h2>
+  <div class="body">
+    <table class="kbd-table">
+      <tr><td>&larr; &rarr; / J K</td><td>Previous / next case</td></tr>
+      <tr><td>U</td><td>Jump to the next case you have not reviewed</td></tr>
+      <tr><td>1 / 2 / 3</td><td>Verdict: good / minor issues / unusable</td></tr>
+      <tr><td>S / O / F</td><td>Side by side / overlay / flip</td></tr>
+      <tr><td>Space</td><td>In flip view, swap plan and CAD</td></tr>
+      <tr><td>L</td><td>Lock or unlock the two panes' zoom and pan</td></tr>
+      <tr><td>+ / &minus;</td><td>Zoom in / out</td></tr>
+      <tr><td>0</td><td>Fit the whole plan</td></tr>
+      <tr><td>9</td><td>Actual pixels, 1:1</td></tr>
+      <tr><td>Scroll / pinch</td><td>Zoom at the pointer. Drag to pan.</td></tr>
+      <tr><td>/</td><td>Jump to the notes box</td></tr>
+      <tr><td>Esc</td><td>Leave the notes box</td></tr>
+      <tr><td>?</td><td>This list</td></tr>
+    </table>
+    <p class="note">Everything you type is written to this browser straight away, so a refresh or a
+      closed tab loses nothing. It lives only in this browser though &mdash; export the CSV before
+      you switch machine or clear your history.</p>
+  </div>
+  <div class="foot"><button class="btn primary" id="helpClose">Close</button></div>
+</dialog>
+
+<dialog id="aboutDlg">
+  <h2>About this set</h2>
+  <div class="body" id="aboutBody"></div>
+  <div class="foot"><button class="btn primary" id="aboutClose">Close</button></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

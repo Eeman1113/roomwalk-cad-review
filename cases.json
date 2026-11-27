@@ -1,0 +1,9470 @@
+{
+ "generated": "2026-11-27T06:54:06.268Z",
+ "reader": "classical offline reader (lib/reader + lib/planCore), no AI, no trained model",
+ "units": "millimetres; internal wall 125 mm, external 250 mm",
+ "total_in_brochure": 162,
+ "cases": [
+  {
+   "id": "daffodil-1C_1st-floor_flat03",
+   "file": "images/daffodil-1C_1st-floor_flat03.png",
+   "block": "Daffodil 1C",
+   "floor": "1st-floor",
+   "flat": "3",
+   "split": "easy",
+   "faded": "no",
+   "W": 1006,
+   "H": 926,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "11'0\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'9\"X10'0\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'9\"X6'9\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'0\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "STUDY",
+      "size": "7'0\"X9'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2412,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "8 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 8 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 176 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "3 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "bad",
+      "text": "4 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.0256410256410255,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     480.5275590551181,
+     494.1062992125984
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'0\"X10'3\"",
+      "w": 180,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'0\"X10'0\"",
+      "w": 132,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'O\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\"X10'0\"",
+      "w": 72,
+      "d": 120,
+      "kind": "kitchen"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 7'0\"X9'0\"",
+      "w": 108,
+      "d": 84,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'9\"X 10'0\"",
+      "w": 57,
+      "d": 120,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "3'9\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 68,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.5,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 19.921259842519703,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINING",
+      "width": 21,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 20,
+      "estimated": false,
+      "tag": "W5"
+     },
+     {
+      "type": "opening",
+      "room": "TOILET",
+      "width": 17.5,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 12,
+      "estimated": false,
+      "tag": "D4"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2,
+    "scaleSpreadPct": 0.8333333333333304,
+    "missing": {}
+   }
+  },
+  {
+   "id": "daffodil-1C_1st-floor_flat05",
+   "file": "images/daffodil-1C_1st-floor_flat05.png",
+   "block": "Daffodil 1C",
+   "floor": "1st-floor",
+   "flat": "5",
+   "split": "easy",
+   "faded": "no",
+   "W": 1006,
+   "H": 925,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "STUDY",
+      "size": "7'0\"X9'0\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'0\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'9\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'0\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'9\"X10'0\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\" X10'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1529,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "1 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 177 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "5 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.0116959064327484,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     480.5275590551181,
+     494.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'0\"X10'3\"",
+      "w": 180,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'0\"X10'0\"",
+      "w": 132,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 7'0\"X9'0O\"",
+      "w": 84,
+      "d": 108,
+      "kind": "other"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\" X10'0\"",
+      "w": 72,
+      "d": 120,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'9\"X 10'0\"",
+      "w": 57,
+      "d": 120,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 71,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "STUDY",
+      "width": 40,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 40,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32.5,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 35,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 35,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 26,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "W5"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 20,
+      "estimated": false,
+      "tag": "W6"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINING",
+      "width": 17.5,
+      "estimated": false,
+      "tag": "D5"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2,
+    "scaleSpreadPct": 0.7638888888888862,
+    "missing": {}
+   }
+  },
+  {
+   "id": "daffodil-1C_typical-floor_flat01",
+   "file": "images/daffodil-1C_typical-floor_flat01.png",
+   "block": "Daffodil 1C",
+   "floor": "typical-floor",
+   "flat": "1",
+   "split": "easy",
+   "faded": "no",
+   "W": 1051,
+   "H": 806,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "5'9\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'6\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "7'9\"X5'6\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X11'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "9'6\"X5'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 1416,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "3 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 134 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "7 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One door could not be placed on a wall; One door could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "5 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.8990318118948823,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     531.6850393700787,
+     458.1850393700787
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9\"X10'3\"",
+      "w": 69,
+      "d": 123,
+      "kind": "kitchen"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9\"X10'3\"",
+      "w": 123,
+      "d": 69,
+      "kind": "kitchen"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 126,
+      "d": 141,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'3\"",
+      "w": 138,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X10'3\"",
+      "w": 123,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 9'6\"X5'0\"",
+      "w": 114,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'9\"X5'6\"",
+      "w": 93,
+      "d": 66,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "door",
+      "room": "",
+      "width": 23.342519685039377,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.18751598874391,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 44.15748031496062,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 34,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "ventilator",
+      "room": "BED ROOM",
+      "width": 32,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "ventilator",
+      "room": "BED ROOM",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "V2"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "V3"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 18.516244563827065,
+      "estimated": false,
+      "tag": "D5"
+     }
+    ],
+    "notes": [
+     "One door could not be placed on a wall",
+     "One door could not be placed on a wall"
+    ],
+    "pxPerIn": 1.8902321083172149,
+    "scaleSpreadPct": 0.34580177294316616,
+    "missing": {}
+   }
+  },
+  {
+   "id": "daffodil-1C_typical-floor_flat05",
+   "file": "images/daffodil-1C_typical-floor_flat05.png",
+   "block": "Daffodil 1C",
+   "floor": "typical-floor",
+   "flat": "5",
+   "split": "easy",
+   "faded": "no",
+   "W": 947,
+   "H": 872,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "STUDY",
+      "size": "7'0\"X9'0\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'0\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'9\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'0\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'9\"X10'0\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\"X10'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1070,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 175 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "2 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.889763779527559,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     480.5275590551181,
+     494.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'0\"X10'3\"",
+      "w": 180,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'0\"X10'0\"",
+      "w": 132,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\"X10'0\"",
+      "w": 72,
+      "d": 120,
+      "kind": "kitchen"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 7'0\"X9'0\"",
+      "w": 84,
+      "d": 108,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'9\"X 10'0\"",
+      "w": 57,
+      "d": 120,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "3'9\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY O'W DE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "opening",
+      "room": "TOILET",
+      "width": 55,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.65853658536586,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.951219512195124,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 30.04878048780488,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 20.926829268292686,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 19.853658536585368,
+      "estimated": false,
+      "tag": "V2"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 19.853658536585368,
+      "estimated": false,
+      "tag": "V2"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 15.560975609756099,
+      "estimated": false,
+      "tag": "D3"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.8636363636363635,
+    "scaleSpreadPct": 0.6097560975609762,
+    "missing": {}
+   }
+  },
+  {
+   "id": "daisy-1A_1st-floor_flat04",
+   "file": "images/daisy-1A_1st-floor_flat04.png",
+   "block": "Daisy 1A",
+   "floor": "1st-floor",
+   "flat": "4",
+   "split": "easy",
+   "faded": "no",
+   "W": 1005,
+   "H": 925,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "11'0\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'9\" X 10'0\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\"X 10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'9\"X6'9\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'0\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "STUDY",
+      "size": "7'0\"X9'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 1165,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 178 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9964349376114081,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     480.5275590551181,
+     494.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'0\"X10'3\"",
+      "w": 180,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'0\"X10'0\"",
+      "w": 132,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 7'0\"X9'0\"",
+      "w": 84,
+      "d": 108,
+      "kind": "other"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\"X 10'0\"",
+      "w": 72,
+      "d": 120,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'9\" X 10'0\"",
+      "w": 57,
+      "d": 120,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 71,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.325428752911286,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "STUDY",
+      "width": 40.24560660597078,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.724116027948334,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.2210459453737,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34.711835697649796,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 32.5,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.65657421130637,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "window",
+      "room": "LIVING/DINING",
+      "width": 20.625873385560023,
+      "estimated": false,
+      "tag": "W5"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 20.12280330298539,
+      "estimated": false,
+      "tag": "W6"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 20.12280330298539,
+      "estimated": false,
+      "tag": "W6"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINING",
+      "width": 14.085962312089773,
+      "estimated": false,
+      "tag": "D5"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.987794612794613,
+    "scaleSpreadPct": 0.9131605214603322,
+    "missing": {}
+   }
+  },
+  {
+   "id": "daisy-1A_typical-floor_flat04",
+   "file": "images/daisy-1A_typical-floor_flat04.png",
+   "block": "Daisy 1A",
+   "floor": "typical-floor",
+   "flat": "4",
+   "split": "easy",
+   "faded": "no",
+   "W": 942,
+   "H": 885,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": "5'3\"X6'6\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X9'10\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X11'3\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'6\"X7'9\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "10'0\"X13'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 5,
+    "windows": 7,
+    "ventilators": 3
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1910,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "2 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 2\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 132 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "2 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "2 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9296,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     475.1850393700787,
+     490.6062992125984
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 10'0\"X13'9\"",
+      "w": 120,
+      "d": 165,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X11'3\"",
+      "w": 135,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'10\"",
+      "w": 126,
+      "d": 118,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'6\"X7'9\"",
+      "w": 78,
+      "d": 93,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'6\"",
+      "w": 63,
+      "d": 78,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'6\"",
+      "w": 78,
+      "d": 63,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X5'0\"",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 3'6\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 'O\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 69.90115620040807,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.81455452278395,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 43.81863523010655,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.51552935842213,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.99387893901609,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 31.82067558376785,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 24.51756971208343,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 22.952618453865338,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 21.909317615053276,
+      "estimated": false,
+      "tag": "V1"
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 1.9169926119078662,
+    "scaleSpreadPct": 1.0603037859895748,
+    "missing": {}
+   }
+  },
+  {
+   "id": "daisy-1A_typical-floor_flat06",
+   "file": "images/daisy-1A_typical-floor_flat06.png",
+   "block": "Daisy 1A",
+   "floor": "typical-floor",
+   "flat": "6",
+   "split": "easy",
+   "faded": "no",
+   "W": 942,
+   "H": 884,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "size": "10'0\"X13'9\""
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'6\"X7'6\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X11'3\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X9'9\""
+     },
+     {
+      "name": "TOILET",
+      "size": "5'3\"X6'6\""
+     }
+    ],
+    "doors": 5,
+    "windows": 7,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2643,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "2 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 183 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "3 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9449838187702266,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     464.6850393700787,
+     494.52755905511805
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 10'0\"X13'9\"",
+      "w": 120,
+      "d": 165,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'9\"",
+      "w": 126,
+      "d": 117,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'9\"",
+      "w": 117,
+      "d": 126,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X11'3\"",
+      "w": 123,
+      "d": 135,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'6\"X7'6\"",
+      "w": 78,
+      "d": 90,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X5'0\"",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 'O\" WID",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 66.38912133891213,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 32,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.02510460251046,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.51046025104603,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34.48117154811715,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 22.644351464435147,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.12970711297071,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 16.98326359832636,
+      "estimated": false,
+      "tag": "V1"
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 1.943089430894309,
+    "scaleSpreadPct": 0.883310088331013,
+    "missing": {}
+   }
+  },
+  {
+   "id": "iris-2D_1st-floor_flat02",
+   "file": "images/iris-2D_1st-floor_flat02.png",
+   "block": "Iris 2D",
+   "floor": "1st-floor",
+   "flat": "2",
+   "split": "easy",
+   "faded": "no",
+   "W": 1156,
+   "H": 881,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "4'2\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "5'9'X 10'4\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'5\"X10'2\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'6\"X10'4\""
+     },
+     {
+      "name": "TOILET",
+      "size": "7'10\"X5'7\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X11'11\""
+     },
+     {
+      "name": "4'1\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "9'6'X5'1\""
+     }
+    ],
+    "doors": 6,
+    "windows": 8,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 1851,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "ok",
+      "text": "6 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 135 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "10 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One door could not be placed on a wall; One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "3 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.0757459831675593,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     533.5275590551181,
+     455.9488188976378
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "BALCONY",
+      "label": "4'2\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'11\"",
+      "w": 126,
+      "d": 143,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'11\"",
+      "w": 143,
+      "d": 126,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'4\"",
+      "w": 138,
+      "d": 124,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'5\"X10'2\"",
+      "w": 125,
+      "d": 122,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9'X 10'4\"",
+      "w": 69,
+      "d": 124,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 9'6'X5'1\"",
+      "w": 114,
+      "d": 61,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'10\"X5'7\"",
+      "w": 94,
+      "d": 67,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY AIM .L 7",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 38.5,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 46.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 26.5,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.328125,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.84375,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34.5,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 26.640625,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "KITCHEN",
+      "width": 24.703125,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 24.21875,
+      "estimated": false,
+      "tag": "W5"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "W6"
+     }
+    ],
+    "notes": [
+     "One door could not be placed on a wall",
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 2.064516129032258,
+    "scaleSpreadPct": 0.7428278688524692,
+    "missing": {}
+   }
+  },
+  {
+   "id": "iris-2D_1st-floor_flat03",
+   "file": "images/iris-2D_1st-floor_flat03.png",
+   "block": "Iris 2D",
+   "floor": "1st-floor",
+   "flat": "3",
+   "split": "easy",
+   "faded": "no",
+   "W": 1048,
+   "H": 951,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "10'11\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "10'2\"X4'8\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'1\"X9'11'"
+     },
+     {
+      "name": "TOILET",
+      "size": "7'1\"X6'9\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'1\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'10\"X9'11\""
+     },
+     {
+      "name": "4'1\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "STUDY",
+      "size": "6'11\"X8'11\""
+     }
+    ],
+    "doors": 6,
+    "windows": 8,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2350,
+   "spaces": null,
+   "quality": {
+    "level": "high",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "ok",
+      "text": "6 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 171 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "8 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.0738351254480287,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     489.44881889763775,
+     495.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'1\"X10'3\"",
+      "w": 181,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 9'10\"X9'11\"",
+      "w": 119,
+      "d": 118,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'11\"X10'0\"",
+      "w": 131,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 6'11\"X8'11\"",
+      "w": 83,
+      "d": 107,
+      "kind": "other"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'1\"X9'11'",
+      "w": 73,
+      "d": 119,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'1\"X6'9\"",
+      "w": 85,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "10'2\"X4'8\" TOILET",
+      "w": 56,
+      "d": 122,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 42.262174068341466,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "STUDY",
+      "width": 42.5,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 40.319085605429215,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.947136563876654,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.947136563876654,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 32.546731753780215,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.74592213358733,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 22,
+      "estimated": false,
+      "tag": "V2"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2.058578431372549,
+    "scaleSpreadPct": 0.38953688754009286,
+    "missing": {}
+   }
+  },
+  {
+   "id": "iris-2D_typical-floor_flat04",
+   "file": "images/iris-2D_typical-floor_flat04.png",
+   "block": "Iris 2D",
+   "floor": "typical-floor",
+   "flat": "4",
+   "split": "easy",
+   "faded": "no",
+   "W": 1019,
+   "H": 924,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "10'11\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "10'2\"X4'8\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'1\"X9'11'"
+     },
+     {
+      "name": "TOILET",
+      "size": "7'1\"X6'9\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'1\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'10\"X9'11\""
+     },
+     {
+      "name": "4'1\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "STUDY",
+      "size": "6'11\"X8'11\""
+     }
+    ],
+    "doors": 6,
+    "windows": 8,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1498,
+   "spaces": null,
+   "quality": {
+    "level": "medium",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "3 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 177 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.0125,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     489.44881889763775,
+     492.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'1\"X10'3\"",
+      "w": 181,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'11\"X10'0\"",
+      "w": 131,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 9'10\"X9'11\"",
+      "w": 119,
+      "d": 118,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'1\"X9'T1'",
+      "w": 73,
+      "d": 119,
+      "kind": "kitchen"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 6'11\"X8'11\"",
+      "w": 83,
+      "d": 107,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'1 \"X6'9\"",
+      "w": 85,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "10 2\"X4'8\" TOILET",
+      "w": null,
+      "d": null,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'1\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.398095238095244,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "STUDY",
+      "width": 40.92190476190477,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.931428571428576,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.931428571428576,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 31.440000000000005,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 19.462857142857146,
+      "estimated": false,
+      "tag": "V2"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "V3"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINING",
+      "width": 17.965714285714288,
+      "estimated": false,
+      "tag": "D2"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2.0038167938931295,
+    "scaleSpreadPct": 0.3362810544778827,
+    "missing": {}
+   }
+  },
+  {
+   "id": "iris-2D_typical-floor_flat05",
+   "file": "images/iris-2D_typical-floor_flat05.png",
+   "block": "Iris 2D",
+   "floor": "typical-floor",
+   "flat": "5",
+   "split": "easy",
+   "faded": "no",
+   "W": 1019,
+   "H": 926,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "4'1\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'10\"X9'11\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "STUDY",
+      "size": "6'11\"X8'11\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'1\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "7'1\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'11\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "10'2\"X4'8\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'1\"X9'11\""
+     }
+    ],
+    "doors": 6,
+    "windows": 5,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1557,
+   "spaces": null,
+   "quality": {
+    "level": "medium",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "8 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "4 of 8 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 177 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.0132325141776937,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     489.44881889763775,
+     492.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'1\"X10'3\"",
+      "w": 181,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'11\"X10'0\"",
+      "w": 131,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 9'10\"X9'11\"",
+      "w": 119,
+      "d": 118,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'1\"X9'11\"",
+      "w": 73,
+      "d": 119,
+      "kind": "kitchen"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 6'11\"X8'11\"",
+      "w": 83,
+      "d": 107,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'1\"X6'9\"",
+      "w": 85,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "10'2\"X4'8\" TOILET",
+      "w": 56,
+      "d": 122,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'1' WIDE",
+      "w": 12,
+      "d": 48,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.5,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "STUDY",
+      "width": 41,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 32,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 19,
+      "estimated": false,
+      "tag": "V2"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 18,
+      "estimated": false,
+      "tag": "D3"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2,
+    "scaleSpreadPct": 0.6027596223674658,
+    "missing": {}
+   }
+  },
+  {
+   "id": "jasmine-1D_1st-floor_flat02",
+   "file": "images/jasmine-1D_1st-floor_flat02.png",
+   "block": "Jasmine 1D",
+   "floor": "1st-floor",
+   "flat": "2",
+   "split": "easy",
+   "faded": "no",
+   "W": 1095,
+   "H": 839,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "5'9\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'6\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "7'9\"X5'6\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X11'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "9'6\"X5'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 3298,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "4 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 128 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "8 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "4 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9849462365591397,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     532.1850393700787,
+     457.4488188976378
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 126,
+      "d": 141,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 141,
+      "d": 126,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'3\"",
+      "w": 138,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X10'3\"",
+      "w": 123,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9\"X10'3\"",
+      "w": 69,
+      "d": 123,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 9'6\"X5'0\"",
+      "w": 114,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'9\"X5'6\"",
+      "w": 93,
+      "d": 66,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "opening",
+      "room": "",
+      "width": 64,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.04508196721312,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 42.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "main_door",
+      "room": "BALCONY",
+      "width": 39.82377049180328,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.790983606557376,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 25,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.709016393442624,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "KITCHEN",
+      "width": 25.204918032786885,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "opening",
+      "room": "TOILET",
+      "width": 22.684426229508198,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "D6"
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 1.983739837398374,
+    "scaleSpreadPct": 0.8196721311475308,
+    "missing": {}
+   }
+  },
+  {
+   "id": "jasmine-1D_1st-floor_flat03",
+   "file": "images/jasmine-1D_1st-floor_flat03.png",
+   "block": "Jasmine 1D",
+   "floor": "1st-floor",
+   "flat": "3",
+   "split": "easy",
+   "faded": "no",
+   "W": 961,
+   "H": 902,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": "5'3\"X6'6\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X9'10\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X11'3\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'6\"X7'9\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "10'0\"X13'9\""
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 5,
+    "windows": 5,
+    "ventilators": 3
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2899,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "2 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 2\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 142 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "2 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9728,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     475.6850393700787,
+     490.1062992125984
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 10'0\"X13'9\"",
+      "w": 120,
+      "d": 165,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X11'3\"",
+      "w": 135,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'10\"",
+      "w": 126,
+      "d": 118,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'6\"X7'9\"",
+      "w": 78,
+      "d": 93,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'6\"",
+      "w": 63,
+      "d": 78,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'6\"",
+      "w": 78,
+      "d": 63,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X5'0\"",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 3'6\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY JIM .07",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.36363636363636,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 43.55844155844156,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.96103896103896,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.96103896103896,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 31.4025974025974,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 26,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 22.79220779220779,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "opening",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 19.246753246753247,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "ventilator",
+      "room": "BALCONY",
+      "width": 12.155844155844155,
+      "estimated": false,
+      "tag": "V1"
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 1.9743589743589745,
+    "scaleSpreadPct": 0.9235209235209152,
+    "missing": {}
+   }
+  },
+  {
+   "id": "jasmine-1D_typical-floor_flat05",
+   "file": "images/jasmine-1D_typical-floor_flat05.png",
+   "block": "Jasmine 1D",
+   "floor": "typical-floor",
+   "flat": "5",
+   "split": "easy",
+   "faded": "no",
+   "W": 945,
+   "H": 870,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "STUDY",
+      "size": "7'0\"X9'0\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'0\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'9\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'0\"X10'0\""
+     },
+     {
+      "name": "TO ILET",
+      "size": "4'9\"X10'0\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\"X10'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 5,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 3109,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "8 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 8 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 2\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 177 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "3 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.8680926916221035,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     480.5275590551181,
+     494.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'0\"X10'3\"",
+      "w": 180,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'0\"X10'0\"",
+      "w": 132,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\"X10'0\"",
+      "w": 72,
+      "d": 120,
+      "kind": "kitchen"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 7'0\"X9'0\"",
+      "w": 84,
+      "d": 108,
+      "kind": "other"
+     },
+     {
+      "name": "TO ILET",
+      "label": "TO ILET 4'9\"X 10'0\"",
+      "w": 57,
+      "d": 120,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "3'9\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4ICIM ..0",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 71,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "opening",
+      "room": "TO ILET",
+      "width": 55,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.81165919282511,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.591928251121075,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.053811659192824,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 32.28699551569507,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 21.524663677130043,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 19.91031390134529,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "ventilator",
+      "room": "TO ILET",
+      "width": 19.91031390134529,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "ventilator",
+      "room": "TO ILET",
+      "width": 18.295964125560538,
+      "estimated": false,
+      "tag": "V2"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.8583333333333334,
+    "scaleSpreadPct": 0.8732593816379586,
+    "missing": {}
+   }
+  },
+  {
+   "id": "jasmine-1D_typical-floor_flat08",
+   "file": "images/jasmine-1D_typical-floor_flat08.png",
+   "block": "Jasmine 1D",
+   "floor": "typical-floor",
+   "flat": "8",
+   "split": "easy",
+   "faded": "no",
+   "W": 1048,
+   "H": 805,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": "9'6\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X11'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "7'9\"X5'6\""
+     },
+     {
+      "name": "DINING LIVING/",
+      "size": null
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "5'9\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'6\"X10'3\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 3286,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "2 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 134 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "6 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One main door could not be placed on a wall; One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "2 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.8998357963875205,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     530.6850393700787,
+     452.6850393700787
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9'X10'3\"",
+      "w": 123,
+      "d": 69,
+      "kind": "kitchen"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 126,
+      "d": 141,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'3\"",
+      "w": 138,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X10'3\"",
+      "w": 123,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 9'6\"X5'0\"",
+      "w": 114,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'9\"X5'6\"",
+      "w": 93,
+      "d": 66,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 'O\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "opening",
+      "room": "",
+      "width": 26.15748031496065,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 66.99085600969484,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 66.99085600969484,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 31.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 43.65748031496062,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32.5,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 21.62696926297235,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 21.62696926297235,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 17.934559876611214,
+      "estimated": false,
+      "tag": "D6"
+     }
+    ],
+    "notes": [
+     "One main door could not be placed on a wall",
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 1.89578111946533,
+    "scaleSpreadPct": 0.6374927552198373,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lavender-2A_1st-floor_flat04",
+   "file": "images/lavender-2A_1st-floor_flat04.png",
+   "block": "Lavender 2A",
+   "floor": "1st-floor",
+   "flat": "4",
+   "split": "easy",
+   "faded": "no",
+   "W": 982,
+   "H": 921,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": "5'3\"X6'6\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X9'10\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X11'3\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'6\"X7'9\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "10'0\"X13'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 5,
+    "windows": 5,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2290,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "1 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 188 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.027737226277372,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     464.6850393700787,
+     486.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 10'0\"X13'9\"",
+      "w": 120,
+      "d": 165,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X11'3\"",
+      "w": 123,
+      "d": 135,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'10\"",
+      "w": 126,
+      "d": 118,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'6\"X7'9\"",
+      "w": 78,
+      "d": 93,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'6\"",
+      "w": 63,
+      "d": 78,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X5'0\"",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 68.73626373626374,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.74725274725274,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 40,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.0989010989011,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.604395604395606,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32.142857142857146,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 31.64835164835165,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 22.747252747252748,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.252747252747252,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 20.76923076923077,
+      "estimated": false,
+      "tag": "V1"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2.022222222222222,
+    "scaleSpreadPct": 0.996461165952689,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lavender-2A_1st-floor_flat07",
+   "file": "images/lavender-2A_1st-floor_flat07.png",
+   "block": "Lavender 2A",
+   "floor": "1st-floor",
+   "flat": "7",
+   "split": "easy",
+   "faded": "no",
+   "W": 1119,
+   "H": 859,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": "9'6\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X11'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "DINING LIVING/",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "7'9\"X5'6\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "5'9\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'6\"X10'3\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1715,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "3 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 156 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "8 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One main door could not be placed on a wall; One door could not be placed on a wall; One door could not be placed on a wall; One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.041371158392435,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     528.5275590551181,
+     425.6062992125984
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "DINING",
+      "label": "DINING LIVING/",
+      "w": null,
+      "d": null,
+      "kind": "dining"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 126,
+      "d": 141,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'3\"",
+      "w": 138,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X10'3\"",
+      "w": 123,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9'X10'3\"",
+      "w": 69,
+      "d": 123,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 9'6\"X5'0\"",
+      "w": 114,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'9\"X5'6\"",
+      "w": 93,
+      "d": 66,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     }
+    ],
+    "placed": [
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 38,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.52554598276899,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.03265878581446,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 42,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.5,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 35,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32.5,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.630134241634945,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "KITCHEN",
+      "width": 23.165698256862353,
+      "estimated": false,
+      "tag": "D5"
+     }
+    ],
+    "notes": [
+     "One main door could not be placed on a wall",
+     "One door could not be placed on a wall",
+     "One door could not be placed on a wall",
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 2.028861788617886,
+    "scaleSpreadPct": 0.46605629263107295,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lavender-2A_typical-floor_flat01",
+   "file": "images/lavender-2A_typical-floor_flat01.png",
+   "block": "Lavender 2A",
+   "floor": "typical-floor",
+   "flat": "1",
+   "split": "easy",
+   "faded": "no",
+   "W": 1119,
+   "H": 790,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "11'3\"X10'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X11'2\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\" X11'3\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "7'6\"X4'6\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "12'3\"X10'2\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'0\"X7'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 2226,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "1 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "2 room sizes were read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 137 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall; One main door could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "2 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.858974358974359,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     535.6850393700787,
+     467.6850393700787
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/",
+      "label": "LIVING/ DINING",
+      "w": null,
+      "d": null,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 12'3\"X10'2\"",
+      "w": 122,
+      "d": 147,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'3\"X10'0\"",
+      "w": 135,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'O\"X11'2\"",
+      "w": 134,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\" X11'3\"",
+      "w": 72,
+      "d": 135,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'0\"X7'0\"",
+      "w": 72,
+      "d": 84,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'6\"X4'6\"",
+      "w": 90,
+      "d": 54,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.617813291756,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 55.63827713895927,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 37.5,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 32.09900604170727,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 29.959072305593452,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 27.819138569479634,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 26,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 26,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 23.004287663223543,
+      "estimated": false,
+      "tag": "D6"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.46930422919509,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 21.934320795166634,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "ventilator",
+      "room": "BALCONY",
+      "width": 20.864353927109725,
+      "estimated": false,
+      "tag": "V1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 20.32937049308127,
+      "estimated": false,
+      "tag": "W5"
+     },
+     {
+      "type": "opening",
+      "room": "TOILET",
+      "width": 13.909569284739817,
+      "estimated": false,
+      "tag": null
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall",
+     "One main door could not be placed on a wall"
+    ],
+    "pxPerIn": 1.8692167577413479,
+    "scaleSpreadPct": 1.0402455661664312,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lavender-2A_typical-floor_flat05",
+   "file": "images/lavender-2A_typical-floor_flat05.png",
+   "block": "Lavender 2A",
+   "floor": "typical-floor",
+   "flat": "5",
+   "split": "easy",
+   "faded": "no",
+   "W": 945,
+   "H": 872,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "STUDY",
+      "size": "7'0\"X9'0\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'0\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'9\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'0\"X10'0\""
+     },
+     {
+      "name": "TO ILET",
+      "size": "4'9\"X10'0\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\"X10'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2138,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 174 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "2 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.8937728937728937,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     480.5275590551181,
+     494.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'0\"X10'3\"",
+      "w": 180,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'0\"X10'0\"",
+      "w": 132,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 7'0\"X9'0\"",
+      "w": 84,
+      "d": 108,
+      "kind": "other"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\"X10'0\"",
+      "w": 72,
+      "d": 120,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TO ILET",
+      "label": "TO ILET 4'9\"X 10'0\"",
+      "w": 57,
+      "d": 120,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 68.28976848394323,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.7714712471994,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.0268857356236,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.0268857356236,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 31.725168035847645,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34.5,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 31.187453323375653,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "TO ILET",
+      "width": 25.810306198655713,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 21.50858849887976,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "window",
+      "room": "TO ILET",
+      "width": 19.895444361463777,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 19.357729648991786,
+      "estimated": false,
+      "tag": "V1"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.8597222222222223,
+    "scaleSpreadPct": 1.194921583271108,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lilac-1E_1st-floor_flat01",
+   "file": "images/lilac-1E_1st-floor_flat01.png",
+   "block": "Lilac 1E",
+   "floor": "1st-floor",
+   "flat": "1",
+   "split": "easy",
+   "faded": "no",
+   "W": 929,
+   "H": 816,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X11'4\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'6\"X7'7\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'6\"X7'7\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'0\"X11'3\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "8'1\"X6'1\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 5,
+    "windows": 6,
+    "ventilators": 0
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1340,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "4 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "2 of 4 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "2 room sizes were read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 202 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.072769953051643,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     487.1850393700787,
+     437.6062992125984
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 8'1\"X6'1\"",
+      "w": 97,
+      "d": 73,
+      "kind": "kitchen"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 8'1\"X6'1\"",
+      "w": 73,
+      "d": 97,
+      "kind": "kitchen"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X11'4\"",
+      "w": 120,
+      "d": 136,
+      "kind": "bedroom"
+     },
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING",
+      "w": null,
+      "d": null,
+      "kind": "living"
+     },
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING",
+      "w": null,
+      "d": null,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 90 A.",
+      "w": null,
+      "d": null,
+      "kind": "bedroom"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": "BE 8'",
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 3'6' WIDE",
+      "w": 36,
+      "d": 72,
+      "kind": "balcony"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "",
+      "width": 33.82010582010582,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 12.952380952380953,
+      "estimated": false,
+      "tag": null
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2.7794117647058822,
+    "scaleSpreadPct": 0,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lilac-1E_typical-floor_flat03",
+   "file": "images/lilac-1E_typical-floor_flat03.png",
+   "block": "Lilac 1E",
+   "floor": "typical-floor",
+   "flat": "3",
+   "split": "easy",
+   "faded": "no",
+   "W": 896,
+   "H": 756,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "size": "14'1\"X10'0\""
+     },
+     {
+      "name": "3'7\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "8'0\"X6'0\""
+     },
+     {
+      "name": "W.C.",
+      "size": "3'7\"X4'7\""
+     },
+     {
+      "name": "BATH",
+      "size": "4'3\"X4'7\""
+     },
+     {
+      "name": "STUDY",
+      "size": "6'10\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     }
+    ],
+    "doors": 5,
+    "windows": 6,
+    "ventilators": 1
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1875,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "5 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "1 of 5 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 185 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "warn",
+      "text": "One main door could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.061224489795918,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     406.6850393700787,
+     412.6850393700787
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 14'1\"X10'0\"",
+      "w": 169,
+      "d": 120,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 6'10\"X6'9\"",
+      "w": 82,
+      "d": 81,
+      "kind": "other"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 6'10\"X6'9\"",
+      "w": 82,
+      "d": 81,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 3'7'W DE",
+      "w": 36,
+      "d": 84,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 47.04790419161677,
+      "estimated": false,
+      "tag": "D1"
+     }
+    ],
+    "notes": [
+     "One main door could not be placed on a wall"
+    ],
+    "pxPerIn": 2.0617283950617282,
+    "scaleSpreadPct": 0.6280122681466271,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lilac-1E_typical-floor_flat07",
+   "file": "images/lilac-1E_typical-floor_flat07.png",
+   "block": "Lilac 1E",
+   "floor": "typical-floor",
+   "flat": "7",
+   "split": "easy",
+   "faded": "no",
+   "W": 928,
+   "H": 816,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "8'1\"X6'1\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X11'4\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'6\"X7'7\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'6\"X7'7\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'0\"X11'3\""
+     }
+    ],
+    "doors": 5,
+    "windows": 6,
+    "ventilators": 0
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 2166,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "4 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 234 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "2 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "bad",
+      "text": "5 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.066747572815534,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     440.44881889763775,
+     439.1850393700787
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X11'4\"",
+      "w": 120,
+      "d": 136,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 9'0\"X11'3\"",
+      "w": 108,
+      "d": 135,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 8'1\"X6'1\"",
+      "w": 97,
+      "d": 73,
+      "kind": "kitchen"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 8'1\"X6'1\"",
+      "w": 73,
+      "d": 97,
+      "kind": "kitchen"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING",
+      "w": null,
+      "d": null,
+      "kind": "living"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'6\"X7'7\"",
+      "w": 54,
+      "d": 91,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'6\"X7'7\"",
+      "w": 54,
+      "d": 91,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 3'6\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "",
+      "width": 66.79787234042553,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "V1"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 2.065934065934066,
+    "scaleSpreadPct": 0.44818754925138315,
+    "missing": {}
+   }
+  },
+  {
+   "id": "lily-1G_1st-floor_flat07",
+   "file": "images/lily-1G_1st-floor_flat07.png",
+   "block": "Lily 1G",
+   "floor": "1st-floor",
+   "flat": "7",
+   "split": "hard",
+   "faded": "yes",
+   "W": 858,
+   "H": 771,
+   "ok": false,
+   "error": "No printed room sizes were found on the plan, so the true scale can't be worked out.",
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": null
+     },
+     {
+      "name": "WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": null
+     }
+    ],
+    "doors": 5,
+    "windows": 5,
+    "ventilators": 1
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "stage": "cad",
+   "ms": 2656
+  },
+  {
+   "id": "lily-1G_typical-floor_flat03",
+   "file": "images/lily-1G_typical-floor_flat03.png",
+   "block": "Lily 1G",
+   "floor": "typical-floor",
+   "flat": "3",
+   "split": "hard",
+   "faded": "yes",
+   "W": 964,
+   "H": 899,
+   "ok": false,
+   "error": "No rooms were recognised on the plan.",
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 5,
+    "windows": 4,
+    "ventilators": 0
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "stage": "cad",
+   "ms": 514
+  },
+  {
+   "id": "lily-1G_typical-floor_flat07",
+   "file": "images/lily-1G_typical-floor_flat07.png",
+   "block": "Lily 1G",
+   "floor": "typical-floor",
+   "flat": "7",
+   "split": "hard",
+   "faded": "yes",
+   "W": 1123,
+   "H": 848,
+   "ok": false,
+   "error": "No printed room sizes were found on the plan, so the true scale can't be worked out.",
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": null
+     },
+     {
+      "name": "WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": null
+     },
+     {
+      "name": "WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 6,
+    "windows": 4,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "stage": "cad",
+   "ms": 3299
+  },
+  {
+   "id": "marigold-2B_1st-floor_flat05",
+   "file": "images/marigold-2B_1st-floor_flat05.png",
+   "block": "Marigold 2B",
+   "floor": "1st-floor",
+   "flat": "5",
+   "split": "easy",
+   "faded": "no",
+   "W": 1013,
+   "H": 918,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "STUDY",
+      "size": "6'11\"X8'11\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "4'1\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'10\"X9'11\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'1\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "7'1\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'11\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'8\"X10'2\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'1\"X9'11'"
+     }
+    ],
+    "doors": 6,
+    "windows": 10,
+    "ventilators": 1
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1187,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "3 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 178 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "5 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9968051118210863,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     484.5275590551181,
+     492.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'1\"X10'3\"",
+      "w": 181,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'11\"X10'0\"",
+      "w": 131,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 9'10\"X9'11\"",
+      "w": 119,
+      "d": 118,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'1\"X9'11'",
+      "w": 73,
+      "d": 119,
+      "kind": "kitchen"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 6'11\"X8'11\"",
+      "w": 83,
+      "d": 107,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'1\"X6'9\"",
+      "w": 85,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'8\"X 10'2\"",
+      "w": 56,
+      "d": 122,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'1\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "opening",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 53.54180639935196,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "STUDY",
+      "width": 39.90379910895099,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 20,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.862908059943294,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32.5,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 31.8220170109356,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "W5"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 21.2146780072904,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "ventilator",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "V1"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.9797613701969339,
+    "scaleSpreadPct": 0.7006202208591328,
+    "missing": {}
+   }
+  },
+  {
+   "id": "marigold-2B_1st-floor_flat06",
+   "file": "images/marigold-2B_1st-floor_flat06.png",
+   "block": "Marigold 2B",
+   "floor": "1st-floor",
+   "flat": "6",
+   "split": "easy",
+   "faded": "no",
+   "W": 1200,
+   "H": 835,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "3'11\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "12'2\"X10'2\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'1\"X6'11\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "7'7\"X4'7\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'4\"X10'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X11'2\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\"X11'4\""
+     },
+     {
+      "name": "4'1\" WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 6,
+    "windows": 10,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1280,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "2 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 191 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "ok",
+      "text": "1 window found in the image that the reading missed, and added."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall; One door could not be placed on a wall; One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "7 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9966832504145937,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     399.6850393700787,
+     441.1850393700787
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'4\"X10'0\"",
+      "w": 136,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'4\"X10'0\"",
+      "w": 120,
+      "d": 136,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X11'2\"",
+      "w": 120,
+      "d": 134,
+      "kind": "bedroom"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'1\"X6'11\"",
+      "w": 73,
+      "d": 83,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'1\"X6'11\"",
+      "w": 73,
+      "d": 83,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'7\"X4'7\"",
+      "w": 91,
+      "d": 55,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 3'11\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "door",
+      "room": "",
+      "width": 21.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 29.725253177697294,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 15,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 23.1756211215945,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W3"
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall",
+     "One door could not be placed on a wall",
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 1.9848443223443224,
+    "scaleSpreadPct": 0.6901614389992372,
+    "missing": {}
+   }
+  },
+  {
+   "id": "marigold-2B_typical-floor_flat04",
+   "file": "images/marigold-2B_typical-floor_flat04.png",
+   "block": "Marigold 2B",
+   "floor": "typical-floor",
+   "flat": "4",
+   "split": "easy",
+   "faded": "no",
+   "W": 964,
+   "H": 902,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": "5'3\"X6'5\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X9'8\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X4'11\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'4\"X11'4\""
+     },
+     {
+      "name": "3'11\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'7\"X7'9'"
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "10'0\"X13'9\""
+     },
+     {
+      "name": "3'7\" WIDE BALCONY",
+      "size": null
+     }
+    ],
+    "doors": 5,
+    "windows": 9,
+    "ventilators": 3
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 1578,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "3 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 128 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "5 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "bad",
+      "text": "2 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9771929824561403,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     469.6850393700787,
+     489.1062992125984
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 10'0\"X13'9\"",
+      "w": 120,
+      "d": 165,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'4\"X11'4\"",
+      "w": 124,
+      "d": 136,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'8\"",
+      "w": 126,
+      "d": 116,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'7\"X7'9'",
+      "w": 79,
+      "d": 93,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'5\"",
+      "w": 63,
+      "d": 77,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'5\"",
+      "w": 77,
+      "d": 63,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X4'11\"",
+      "w": 75,
+      "d": 59,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 3'11\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.74721189591078,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 37.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 33.9212598425197,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.89591078066914,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 29.82899628252788,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 26.28996282527881,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 23.5,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 21.739776951672862,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "D6"
+     },
+     {
+      "type": "window",
+      "room": "LIVING/DINING",
+      "width": 12.133828996282528,
+      "estimated": false,
+      "tag": "W4"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.9779411764705883,
+    "scaleSpreadPct": 1.1152416356877248,
+    "missing": {}
+   }
+  },
+  {
+   "id": "marigold-2B_typical-floor_flat06",
+   "file": "images/marigold-2B_typical-floor_flat06.png",
+   "block": "Marigold 2B",
+   "floor": "typical-floor",
+   "flat": "6",
+   "split": "easy",
+   "faded": "no",
+   "W": 964,
+   "H": 902,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "3'7\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "10'0\"X13'9\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'7\"X7'7\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'4\"X11'4\""
+     },
+     {
+      "name": "3'11\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X4'11\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X9'8\""
+     },
+     {
+      "name": "TOILET",
+      "size": "5'3\"X6'5\""
+     }
+    ],
+    "doors": 5,
+    "windows": 9,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1429,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "4 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 154 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "7 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "bad",
+      "text": "2 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9829787234042553,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     474.1850393700787,
+     483.52755905511805
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 10'0\"X13'9\"",
+      "w": 120,
+      "d": 165,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'4\"X11'4\"",
+      "w": 124,
+      "d": 136,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'8\"",
+      "w": 126,
+      "d": 116,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'7\"X7'7\"",
+      "w": 79,
+      "d": 91,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'5\"",
+      "w": 63,
+      "d": 77,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'3\"X6'5\"",
+      "w": 77,
+      "d": 63,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X4'11\"",
+      "w": 75,
+      "d": 59,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY JIM .LLE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.5725806451613,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 41.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.072580645161295,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.072580645161295,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 35.056451612903224,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 23,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINING",
+      "width": 15.241935483870968,
+      "estimated": false,
+      "tag": "D5"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.9682539682539681,
+    "scaleSpreadPct": 0.38371488033299705,
+    "missing": {}
+   }
+  },
+  {
+   "id": "orchid-1B_1st-floor_flat02",
+   "file": "images/orchid-1B_1st-floor_flat02.png",
+   "block": "Orchid 1B",
+   "floor": "1st-floor",
+   "flat": "2",
+   "split": "easy",
+   "faded": "no",
+   "W": 1097,
+   "H": 842,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "5'9\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'6\"X10'3\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "7'9\"X5'6\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X11'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "9'6\"X5'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 10,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1513,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "4 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 128 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "9 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One main door could not be placed on a wall; One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "3 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.990625,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     526.6850393700787,
+     457.4488188976378
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 126,
+      "d": 141,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 141,
+      "d": 126,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'3\"",
+      "w": 138,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X10'3\"",
+      "w": 123,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9\"X10'3\"",
+      "w": 69,
+      "d": 123,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 9'6\"X5'0\"",
+      "w": 114,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'9\"X5'6\"",
+      "w": 93,
+      "d": 66,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 67.04508196721312,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "opening",
+      "room": "",
+      "width": 63.516393442622956,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 34.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.790983606557376,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 25,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.204918032786885,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 22.5,
+      "estimated": false,
+      "tag": "D5"
+     },
+     {
+      "type": "opening",
+      "room": "TOILET",
+      "width": 22.684426229508198,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "KITCHEN",
+      "width": 22.684426229508198,
+      "estimated": false,
+      "tag": "D6"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.684426229508198,
+      "estimated": false,
+      "tag": "W5"
+     }
+    ],
+    "notes": [
+     "One main door could not be placed on a wall",
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 1.983739837398374,
+    "scaleSpreadPct": 0.38056206088992184,
+    "missing": {}
+   }
+  },
+  {
+   "id": "orchid-1B_1st-floor_flat05",
+   "file": "images/orchid-1B_1st-floor_flat05.png",
+   "block": "Orchid 1B",
+   "floor": "1st-floor",
+   "flat": "5",
+   "split": "easy",
+   "faded": "no",
+   "W": 988,
+   "H": 912,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "STUDY",
+      "size": "7'0\"X9'0\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": "15'0\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'9\"X6'9\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'0\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'9\"X10'0\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'0\" X10'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 5,
+    "ventilators": 1
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1910,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "7 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "1 of 7 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 179 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.982716049382716,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     480.5275590551181,
+     494.5275590551181
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 15'0\"X10'3\"",
+      "w": 180,
+      "d": 123,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'0\"X10'0\"",
+      "w": 132,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "STUDY",
+      "label": "STUDY 7'0\"X9'0\"",
+      "w": 84,
+      "d": 108,
+      "kind": "other"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'0\" X10'0\"",
+      "w": 72,
+      "d": 120,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'9\"X6'9\"",
+      "w": 81,
+      "d": 81,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'9\"X10'0",
+      "w": 57,
+      "d": 120,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70.5,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "STUDY",
+      "width": 41.186440677966104,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "main_door",
+      "room": "LIVING/DINING",
+      "width": 40.16949152542373,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.10169491525424,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 36.10169491525424,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33.05084745762712,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 35,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "STUDY",
+      "width": 31.52542372881356,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.88135593220339,
+      "estimated": false,
+      "tag": "W5"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 19.830508474576273,
+      "estimated": false,
+      "tag": "W6"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINING",
+      "width": 16.271186440677965,
+      "estimated": false,
+      "tag": "D5"
+     }
+    ],
+    "notes": [],
+    "pxPerIn": 1.9666666666666666,
+    "scaleSpreadPct": 0.8239171374764598,
+    "missing": {}
+   }
+  },
+  {
+   "id": "orchid-1B_typical-floor_flat02",
+   "file": "images/orchid-1B_typical-floor_flat02.png",
+   "block": "Orchid 1B",
+   "floor": "typical-floor",
+   "flat": "2",
+   "split": "easy",
+   "faded": "no",
+   "W": 1089,
+   "H": 834,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "5'9\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X10'3\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "11'6\"X10'3\""
+     },
+     {
+      "name": "TOILET",
+      "size": "7'9\"X5'6\""
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X11'9\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "9'6\"X5'0\""
+     }
+    ],
+    "doors": 6,
+    "windows": 6,
+    "ventilators": 3
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 1215,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "10 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "3 of 10 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 180 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "11 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall; One main door could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "14 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9788359788359788,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     520.6062992125984,
+     426.6062992125984
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9\"X10'3\"",
+      "w": 69,
+      "d": 123,
+      "kind": "kitchen"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 5'9\"X10'3\"",
+      "w": 123,
+      "d": 69,
+      "kind": "kitchen"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X11'9\"",
+      "w": 126,
+      "d": 141,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'3\"",
+      "w": 138,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 11'6\"X10'3\"",
+      "w": 138,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X10'3\"",
+      "w": 123,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X10'3\"",
+      "w": 123,
+      "d": 123,
+      "kind": "bedroom"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 9'6\"X5'0\"",
+      "w": 114,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 7'9\"X5'6\"",
+      "w": 93,
+      "d": 66,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY 4'0' WIDE",
+      "w": 48,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 31.5,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "opening",
+      "room": "",
+      "width": 35.5,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "opening",
+      "room": "",
+      "width": 37,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 14.5,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 18.078740157480297,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 32,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 18.078740157480297,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 22.450886463529063,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "KITCHEN",
+      "width": 19.899649365400762,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "window",
+      "room": "",
+      "width": 18.36890710652378,
+      "estimated": false,
+      "tag": "W4"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 11.735690651390193,
+      "estimated": false,
+      "tag": "D5"
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall",
+     "One main door could not be placed on a wall"
+    ],
+    "pxPerIn": 1.9598335269066975,
+    "scaleSpreadPct": 0.741226278289836,
+    "missing": {}
+   }
+  },
+  {
+   "id": "orchid-1B_typical-floor_flat06",
+   "file": "images/orchid-1B_typical-floor_flat06.png",
+   "block": "Orchid 1B",
+   "floor": "typical-floor",
+   "flat": "6",
+   "split": "easy",
+   "faded": "no",
+   "W": 956,
+   "H": 897,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "size": "10'0\"X13'9\""
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'6\"X7'6\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X11'3\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'6\"X9'9\""
+     },
+     {
+      "name": "TOILET",
+      "size": "5'3\"X6'6\""
+     }
+    ],
+    "doors": 5,
+    "windows": 5,
+    "ventilators": 1
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 1671,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "warn",
+      "text": "3 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 1\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 180 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "ok",
+      "text": "4 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One door could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9771505376344085,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     468.6850393700787,
+     485.52755905511805
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINING",
+      "label": "LIVING/DINING 10'0\"X13'9\"",
+      "w": 120,
+      "d": 165,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'9\"",
+      "w": 126,
+      "d": 117,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'6\"X9'9\"",
+      "w": 117,
+      "d": 126,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X11'3\"",
+      "w": 123,
+      "d": 135,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 6'6\"X7'6\"",
+      "w": 78,
+      "d": 90,
+      "kind": "kitchen"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X5'0\"",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY O\" WIDE",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 70,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "door",
+      "room": "BALCONY",
+      "width": 33,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.96103896103896,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 35.45454545454545,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "KITCHEN",
+      "width": 34.44155844155844,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 33,
+      "estimated": false,
+      "tag": "W3"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D4"
+     },
+     {
+      "type": "main_door",
+      "room": "TOILET",
+      "width": 22.79220779220779,
+      "estimated": false,
+      "tag": "MD"
+     },
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 22.285714285714285,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "window",
+      "room": "LIVING/DINING",
+      "width": 19.753246753246753,
+      "estimated": false,
+      "tag": "W4"
+     }
+    ],
+    "notes": [
+     "One door could not be placed on a wall"
+    ],
+    "pxPerIn": 1.9743589743589745,
+    "scaleSpreadPct": 0.9523809523809601,
+    "missing": {}
+   }
+  },
+  {
+   "id": "rose-5_1st-floor_flat02",
+   "file": "images/rose-5_1st-floor_flat02.png",
+   "block": "Rose 5",
+   "floor": "1st-floor",
+   "flat": "2",
+   "split": "hard",
+   "faded": "no",
+   "W": 1163,
+   "H": 1587,
+   "ok": false,
+   "error": "No printed room sizes were found on the plan, so the true scale can't be worked out.",
+   "truth": {
+    "rooms": [
+     {
+      "name": "LIVING/DINNG",
+      "size": "10'2\"X14'2\""
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'3\"X7'10\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "3'4\" WIDE PASSAGE",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "4'4\"X7'10\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'2\"X11'6\""
+     },
+     {
+      "name": "MASTER BED ROOM",
+      "size": "10'0\"X10'2\""
+     }
+    ],
+    "doors": 4,
+    "windows": 6,
+    "ventilators": 3
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "stage": "cad",
+   "ms": 2608
+  },
+  {
+   "id": "rose-5_2nd-floor_flat01",
+   "file": "images/rose-5_2nd-floor_flat01.png",
+   "block": "Rose 5",
+   "floor": "2nd-floor",
+   "flat": "1",
+   "split": "hard",
+   "faded": "no",
+   "W": 1182,
+   "H": 1619,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "9'2\"X11'6\""
+     },
+     {
+      "name": "MASTER BED ROOM",
+      "size": "10'0\"X10'2\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'4\"X7'10\""
+     },
+     {
+      "name": "3'4\" WIDE PASSAGE",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'3\"X7'10\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINNG",
+      "size": "10'2\"X14'2\""
+     }
+    ],
+    "doors": 4,
+    "windows": 6,
+    "ventilators": 3
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 3034,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "6 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 6 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 2\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall; One window could not be placed on a wall; One window could not be placed on a wall; One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.9108974358974358,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     552.1850393700787,
+     826.6850393700788
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 9'2\"X11'6\"",
+      "w": 138,
+      "d": 110,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 9'2\"X11'6\"",
+      "w": 138,
+      "d": 110,
+      "kind": "bedroom"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'4\"X 7'10\"",
+      "w": 94,
+      "d": 52,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 4'4\"X 7'10\"",
+      "w": 94,
+      "d": 52,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X 5'0\"",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X 5'0\"",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY IDE 3'6\"",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY IDE 3'6\"",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 31.720379146919434,
+      "estimated": false,
+      "tag": null
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall",
+     "One window could not be placed on a wall",
+     "One window could not be placed on a wall",
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 3.0579710144927534,
+    "scaleSpreadPct": 3.670464858324096,
+    "missing": {}
+   }
+  },
+  {
+   "id": "rose-5_typical-floor_flat03",
+   "file": "images/rose-5_typical-floor_flat03.png",
+   "block": "Rose 5",
+   "floor": "typical-floor",
+   "flat": "3",
+   "split": "hard",
+   "faded": "no",
+   "W": 1171,
+   "H": 1615,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "3'6\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINNG",
+      "size": "10'2\"X14'2\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "6'3\"X7'10\""
+     },
+     {
+      "name": "TOILET",
+      "size": "4'4\"X7'10\""
+     },
+     {
+      "name": "3'4\" WIDE PASSAGE",
+      "size": null
+     },
+     {
+      "name": "TOILET",
+      "size": "6'3\"X5'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "9'2\"X11'6\""
+     },
+     {
+      "name": "MASTER BED ROOM",
+      "size": "10'0\"X10'2\""
+     }
+    ],
+    "doors": 5,
+    "windows": 8,
+    "ventilators": 3
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 3466,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "4 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 4 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 3\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall; One window could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.899344262295082,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     536.6850393700787,
+     834.6850393700788
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINNG",
+      "label": "LIVING/DINNG 10'2\"X14'2\"",
+      "w": 170,
+      "d": 122,
+      "kind": "living"
+     },
+     {
+      "name": "LIVING/DINNG",
+      "label": "LIVING/DINNG 10'2\"X14'2\"",
+      "w": 170,
+      "d": 122,
+      "kind": "living"
+     },
+     {
+      "name": "OLZ",
+      "label": "OLZ 4'4\"X TOILET",
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X 5'0",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'3\"X 5'0",
+      "w": 75,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "ALCON",
+      "label": "ALCON IDE 3'6\"",
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "door",
+      "room": "OLZ",
+      "width": 9.186105637831309,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "window",
+      "room": "",
+      "width": 8.401925888260344,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 8.289900209750206,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 6.497489353588,
+      "estimated": false,
+      "tag": "D2"
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall",
+     "One window could not be placed on a wall"
+    ],
+    "pxPerIn": 8.926524822695036,
+    "scaleSpreadPct": 2.0148731964660325,
+    "missing": {}
+   }
+  },
+  {
+   "id": "sunflower-6_1st-floor_flat02",
+   "file": "images/sunflower-6_1st-floor_flat02.png",
+   "block": "Sunflower 6",
+   "floor": "1st-floor",
+   "flat": "2",
+   "split": "hard",
+   "faded": "no",
+   "W": 1077,
+   "H": 1304,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "KITCHEN",
+      "size": "7'0\"X7'0\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINNG",
+      "size": "10'0\"X13'8\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'5\"X7'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X9'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "5'8\"X6'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'2\"X10'2\""
+     }
+    ],
+    "doors": 5,
+    "windows": 7,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2071,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "8 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 8 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "warn",
+      "text": "One main door could not be placed on a wall; One door could not be placed on a wall; One door could not be placed on a wall; One door could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "5 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.7730836236933798,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     527.1850393700787,
+     759.1850393700788
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'2\"X10'2\"",
+      "w": 122,
+      "d": 122,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'2\"X10'2\"",
+      "w": 122,
+      "d": 122,
+      "kind": "bedroom"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 7'0\"X7'0\"",
+      "w": 84,
+      "d": 84,
+      "kind": "kitchen"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN 7'0\"X7'0\"",
+      "w": 84,
+      "d": 84,
+      "kind": "kitchen"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X9'0\"",
+      "w": 123,
+      "d": 108,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'3\"X9'0\"",
+      "w": 123,
+      "d": 108,
+      "kind": "bedroom"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'5\"X7'0\"",
+      "w": 84,
+      "d": 77,
+      "kind": "toilet"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "LIVING/DINNG",
+      "label": "LIVING/DINNG 10'0\"X13'8\"",
+      "w": 164,
+      "d": 120,
+      "kind": "living"
+     }
+    ],
+    "placed": [
+     {
+      "type": "door",
+      "room": "LIVING/DINNG",
+      "width": 19.026506024096385,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "opening",
+      "room": "BED ROOM",
+      "width": 17.204819277108435,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINNG",
+      "width": 17.002409638554216,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 11.739759036144578,
+      "estimated": false,
+      "tag": "W1"
+     }
+    ],
+    "notes": [
+     "One main door could not be placed on a wall",
+     "One door could not be placed on a wall",
+     "One door could not be placed on a wall",
+     "One door could not be placed on a wall"
+    ],
+    "pxPerIn": 4.940476190476191,
+    "scaleSpreadPct": 4.0252814536835935,
+    "missing": {}
+   }
+  },
+  {
+   "id": "sunflower-6_2nd-floor_flat01",
+   "file": "images/sunflower-6_2nd-floor_flat01.png",
+   "block": "Sunflower 6",
+   "floor": "2nd-floor",
+   "flat": "1",
+   "split": "hard",
+   "faded": "no",
+   "W": 1319,
+   "H": 1152,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "10'10\"X11'0\""
+     },
+     {
+      "name": "4'0\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'0\"X10'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'6\"X5'0\""
+     },
+     {
+      "name": "TOILET",
+      "size": "5'8\"X5'0\""
+     },
+     {
+      "name": "BOX",
+      "size": "5'2\"X5'0\""
+     },
+     {
+      "name": "LIVING/DINNG",
+      "size": "10'8\"X17'4\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": "11'2\"X6'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'5\"X10'0\""
+     }
+    ],
+    "doors": 7,
+    "windows": 10,
+    "ventilators": 4
+   },
+   "hasOpeningTruth": false,
+   "measured": null,
+   "ms": 2623,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "8 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 8 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "ok",
+      "text": "AI position reading was off by about 6\" on average before snapping."
+     },
+     {
+      "level": "ok",
+      "text": "1 room size was read width/depth swapped and corrected from the image."
+     },
+     {
+      "level": "ok",
+      "text": "Outer wall line traced from the image."
+     },
+     {
+      "level": "ok",
+      "text": "2 door/window openings measured from the image (position and width)."
+     },
+     {
+      "level": "warn",
+      "text": "One opening could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "5 pairs of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 2.5714285714285716,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     495.0275590551181,
+     451.1850393700787
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINNG",
+      "label": "LIVING/DINNG 10'8\"X17'4\"",
+      "w": 208,
+      "d": 128,
+      "kind": "living"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 6'6\"X5'0\"",
+      "w": 78,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'10\"X11'0\"",
+      "w": 130,
+      "d": 132,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'10\"X11'0\"",
+      "w": 132,
+      "d": 130,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'0\"X10'0\"",
+      "w": 120,
+      "d": 120,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "BALCONY",
+      "label": "4'0\" WIDE BALCONY",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'8\"X5'0\"",
+      "w": 68,
+      "d": 60,
+      "kind": "toilet"
+     },
+     {
+      "name": "TOILET",
+      "label": "TOILET 5'8\"X5'0\"",
+      "w": 68,
+      "d": 60,
+      "kind": "toilet"
+     }
+    ],
+    "placed": [
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 86.32258064516128,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "window",
+      "room": "BED ROOM",
+      "width": 49.93548387096774,
+      "estimated": false,
+      "tag": "W2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 33.677419354838705,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "TOILET",
+      "width": 25.5,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "door",
+      "room": "BED ROOM",
+      "width": 29.5,
+      "estimated": false,
+      "tag": "D3"
+     },
+     {
+      "type": "window",
+      "room": "TOILET",
+      "width": 15.483870967741934,
+      "estimated": false,
+      "tag": "W3"
+     }
+    ],
+    "notes": [
+     "One opening could not be placed on a wall"
+    ],
+    "pxPerIn": 2.5833333333333335,
+    "scaleSpreadPct": 1.9354838709677358,
+    "missing": {}
+   }
+  },
+  {
+   "id": "sunflower-6_typical-floor_flat03",
+   "file": "images/sunflower-6_typical-floor_flat03.png",
+   "block": "Sunflower 6",
+   "floor": "typical-floor",
+   "flat": "3",
+   "split": "hard",
+   "faded": "no",
+   "W": 1131,
+   "H": 1362,
+   "ok": true,
+   "error": null,
+   "truth": {
+    "rooms": [
+     {
+      "name": "TOILET",
+      "size": "5'8\"X6'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'2\"X10'2\""
+     },
+     {
+      "name": "TOILET",
+      "size": "6'5\"X7'0\""
+     },
+     {
+      "name": "BED ROOM",
+      "size": "10'3\"X9'0\""
+     },
+     {
+      "name": "LIVING/DINNG",
+      "size": "10'0\"X13'8\""
+     },
+     {
+      "name": "3'9\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "KITCHEN",
+      "size": "7'0\"X7'0\""
+     }
+    ],
+    "doors": 5,
+    "windows": 7,
+    "ventilators": 2
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "ms": 2783,
+   "spaces": null,
+   "quality": {
+    "level": "low",
+    "checks": [
+     {
+      "level": "ok",
+      "text": "3 printed room sizes read; every one is drawn exactly."
+     },
+     {
+      "level": "bad",
+      "text": "0 of 3 rooms confirmed against the walls in the image."
+     },
+     {
+      "level": "warn",
+      "text": "AI position reading was off by about 11\" on average before snapping."
+     },
+     {
+      "level": "warn",
+      "text": "Outer wall line inferred (rooms and page share a colour)."
+     },
+     {
+      "level": "ok",
+      "text": "Image draws internal walls about 227 mm thick; drawn at your 125 mm."
+     },
+     {
+      "level": "warn",
+      "text": "One window could not be placed on a wall; One opening could not be placed on a wall."
+     },
+     {
+      "level": "bad",
+      "text": "1 pair of spaces overlap; the reading may be wrong."
+     }
+    ]
+   },
+   "overlay": {
+    "sc": 1.5640243902439024,
+    "viewBox": [
+     -59.84251968503937,
+     -59.84251968503937,
+     656.1062992125985,
+     855.1850393700788
+    ]
+   },
+   "cad": {
+    "rooms": [
+     {
+      "name": "LIVING/DINNG",
+      "label": "LIVING/DINNG 10'0\"X13'8\"",
+      "w": 120,
+      "d": 164,
+      "kind": "living"
+     },
+     {
+      "name": "LIVING/DINNG",
+      "label": "LIVING/DINNG 10'0\"X13'8\"",
+      "w": 164,
+      "d": 120,
+      "kind": "living"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 103 X20",
+      "w": null,
+      "d": null,
+      "kind": "bedroom"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 103 X20",
+      "w": null,
+      "d": null,
+      "kind": "bedroom"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BED ROOM",
+      "label": "BED ROOM 10'2\"X10'2\"",
+      "w": 122,
+      "d": 122,
+      "kind": "bedroom"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": "BALCONY",
+      "label": "BALCONY IDE SS",
+      "w": null,
+      "d": null,
+      "kind": "balcony"
+     },
+     {
+      "name": "KITCHEN",
+      "label": "KITCHEN ZO X10\"",
+      "w": null,
+      "d": null,
+      "kind": "kitchen"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     },
+     {
+      "name": null,
+      "label": null,
+      "w": null,
+      "d": null,
+      "kind": "other"
+     }
+    ],
+    "placed": [
+     {
+      "type": "opening",
+      "room": "",
+      "width": 42.43694060211554,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "window",
+      "room": "",
+      "width": 35.736371033360456,
+      "estimated": false,
+      "tag": "W1"
+     },
+     {
+      "type": "opening",
+      "room": "KITCHEN",
+      "width": 33.87510170870627,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "door",
+      "room": "",
+      "width": 29.03580146460537,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINNG",
+      "width": 29.03580146460537,
+      "estimated": false,
+      "tag": "D1"
+     },
+     {
+      "type": "door",
+      "room": "LIVING/DINNG",
+      "width": 24.196501220504476,
+      "estimated": false,
+      "tag": "D2"
+     },
+     {
+      "type": "opening",
+      "room": "LIVING/DINNG",
+      "width": 21.962978030919448,
+      "estimated": false,
+      "tag": null
+     },
+     {
+      "type": "opening",
+      "room": "LIVING/DINNG",
+      "width": 12.284377542717657,
+      "estimated": false,
+      "tag": null
+     }
+    ],
+    "notes": [
+     "One window could not be placed on a wall",
+     "One opening could not be placed on a wall"
+    ],
+    "pxPerIn": 2.6863387978142077,
+    "scaleSpreadPct": 1.7493897477624032,
+    "missing": {}
+   }
+  },
+  {
+   "id": "tulip-1F_typical-floor_flat01",
+   "file": "images/tulip-1F_typical-floor_flat01.png",
+   "block": "Tulip 1F",
+   "floor": "typical-floor",
+   "flat": "1",
+   "split": "hard",
+   "faded": "yes",
+   "W": 1024,
+   "H": 893,
+   "ok": false,
+   "error": "No printed room sizes were found on the plan, so the true scale can't be worked out.",
+   "truth": {
+    "rooms": [
+     {
+      "name": "BED ROOM",
+      "size": "9'2\"X10'1\""
+     },
+     {
+      "name": "KITCHEN",
+      "size": null
+     },
+     {
+      "name": "4'5\" WIDE BALCONY",
+      "size": null
+     },
+     {
+      "name": "LIVING/DINING",
+      "size": null
+     },
+     {
+      "name": "BATH",
+      "size": null
+     },
+     {
+      "name": "W.C.",
+      "size": null
+     },
+     {
+      "name": "STUDY",
+      "size": "6'10\"X7'0\""
+     }
+    ],
+    "doors": 5,
+    "windows": 3,
+    "ventilators": 1
+   },
+   "hasOpeningTruth": true,
+   "measured": null,
+   "stage": "cad",
+   "ms": 880
+  }
+ ]
+}
