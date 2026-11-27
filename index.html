@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <div id="app">
@@ -82,13 +82,15 @@
           <button id="nextBtn" title="Next case (&rarr;)">&rarr;</button>
           <button id="todoBtn" title="Next unreviewed (U)">Next unreviewed</button>
         </div>
-        <button class="btn" id="reviewToggle" title="Hide the review column">Hide review</button>
+        <button class="btn" id="wheelBtn" title="What a plain scroll does">Wheel: auto</button>
+        <button class="btn" id="indexToggle" aria-pressed="true" title="Hide the case list ([)">Hide list</button>
+        <button class="btn" id="reviewToggle" title="Hide the review column (])">Hide review</button>
       </div>
 
       <div class="panes" id="panes">
         <div class="pane primary">
           <div class="pane-hd"><span id="hdA">Brochure plan</span><span class="meta" id="metaA"></span></div>
-          <div class="vp" id="vpA"><div class="canvas" id="cvA"></div></div>
+          <div class="vp" id="vpA"><div class="canvas" id="cvA"></div><span class="vphint">pinch to zoom &middot; two fingers to pan</span></div>
         </div>
         <div class="pane secondary cad">
           <div class="pane-hd"><span id="hdB">Generated CAD</span><span class="meta" id="metaB"></span></div>
@@ -145,7 +147,7 @@
     <button class="chipbtn" id="aboutBtn">About this set</button>
     <span class="spacer"></span>
     <span class="keys">
-      <span>&larr;/&rarr; case</span><span>1/2/3 verdict</span><span>S/O/F view</span><span>? keys</span>
+      <span>&larr;/&rarr; case</span><span>1/2/3 verdict</span><span>S/O/F view</span><span id="gestureKeys">scroll or pinch zooms</span><span>? keys</span>
     </span>
   </footer>
 </div>
@@ -163,11 +165,19 @@
       <tr><td>+ / &minus;</td><td>Zoom in / out</td></tr>
       <tr><td>0</td><td>Fit the whole plan</td></tr>
       <tr><td>9</td><td>Actual pixels, 1:1</td></tr>
-      <tr><td>Scroll / pinch</td><td>Zoom at the pointer. Drag to pan.</td></tr>
+      <tr><td>[ / ]</td><td>Hide or show the case list / the review column</td></tr>
+      <tr><td>Mouse wheel</td><td>Zoom at the pointer</td></tr>
+      <tr><td>Pinch</td><td>Zoom at the pointer, on a trackpad</td></tr>
+      <tr><td>Two fingers</td><td>Pan. Dragging with the pointer pans too.</td></tr>
       <tr><td>/</td><td>Jump to the notes box</td></tr>
       <tr><td>Esc</td><td>Leave the notes box</td></tr>
       <tr><td>?</td><td>This list</td></tr>
     </table>
+    <p class="note">A plain scroll means <b>zoom</b> from a mouse and <b>pan</b> from a
+      trackpad, and the browser does not say which one you have. The page guesses from the
+      shape of the events; if it guesses wrong, the <b>Wheel:</b> button above the drawings
+      pins it to zoom or to pan and remembers the choice. Pinch and
+      &#8984;/Ctrl+scroll always zoom.</p>
     <p class="note">Drawings are produced by the classical, no-AI reader &mdash; the code that
       ships. No trained model is involved, so judge the drawing, not a model.</p>
     <p class="note">Everything you type is written to this browser straight away, so a refresh or a
@@ -183,6 +193,6 @@
   <div class="foot"><button class="btn primary" id="aboutClose">Close</button></div>
 </dialog>
 
-<script src="app.js?v=3"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

@@ -36,7 +36,16 @@ pages (Lily, Tulip, Rose).
 | `Space` | in flip view, swap plan and CAD |
 | `L` | lock or unlock the two panes' zoom and pan |
 | `+` `−` `0` `9` | zoom in / out / fit / actual pixels |
-| scroll, drag | zoom at the pointer, pan |
+| `[` `]` | hide or show the case list / the review column |
+| mouse wheel, pinch | zoom at the pointer |
+| two fingers, drag | pan |
+
+A plain scroll means *zoom* from a mouse and *pan* from a trackpad, and the browser
+does not say which one fired it. The page guesses from the shape of the events — a
+wheel sends few large quantised deltas, a trackpad many small fractional ones — and
+the **Wheel:** button above the drawings pins it to zoom or pan if the guess is wrong.
+Pinch and ⌘/Ctrl+scroll always zoom.
+
 | `/` | jump to the notes box |
 | `?` | the full list, plus what these drawings are |
 

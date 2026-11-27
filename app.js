@@ -25,7 +25,7 @@
   var FLAGKEYS = FLAGS.map(function (f) { return f[0]; });
 
   var data = null, cases = [], cur = 0;
-  var state = { checker: "", reviews: {}, ui: { mode: "side", lock: true, opacity: 75, flip: "plan", review: true, theme: null } };
+  var state = { checker: "", reviews: {}, ui: { mode: "side", lock: true, opacity: 75, flip: "plan", review: true, index: true, wheel: "auto", theme: null } };
   var svgCache = {}, svgSeq = 0;
   var views = { A: null, B: null };
   var fitZ = { A: 1, B: 1 };
@@ -165,6 +165,56 @@
       " · split: " + esc(c.split) + "</p></div></div>";
   }
 
+  /* A 400 dpi PNG costs ~W*H*4 bytes once decoded — far more than it does on
+     disk — so the old one is dropped explicitly rather than left for whenever
+     the collector gets round to it. Replacing innerHTML alone detaches the
+     node but Chrome can hold the decoded bitmap while the image object lives. */
+  function setCanvas(p, html) {
+    var el = cv(p);
+    Array.prototype.forEach.call(el.querySelectorAll("img"), function (img) {
+      img.removeAttribute("src");
+      img.removeAttribute("srcset");
+    });
+    el.innerHTML = html;
+  }
+
+  /* Only the current case and one neighbour are kept; everything else is let
+     go, so walking 40 cases does not accumulate 40 drawings in memory. */
+  function releaseFar() {
+    var keep = {};
+    [cur - 1, cur, cur + 1].forEach(function (i) {
+      if (cases[i]) keep[cases[i].id] = true;
+    });
+    Object.keys(svgCache).forEach(function (k) {
+      if (!keep[k]) delete svgCache[k];
+    });
+  }
+
+  var prefetchImg = null;
+
+  function landSvg(id, text) {
+    if (svgCache[id] !== null && svgCache[id] !== undefined) return;
+    svgCache[id] = text;
+    if (cases[cur] && cases[cur].id === id) { paintPanes(); fitAll(); }
+  }
+
+
+  function prefetchNeighbour() {
+    var n = cases[cur + 1];
+    if (!n) { prefetchImg = null; return; }
+    // One image object at a time: the previous prefetch becomes unreachable.
+    prefetchImg = new Image();
+    prefetchImg.decoding = "async";
+    prefetchImg.src = "plans/" + encodeURIComponent(n.id) + ".png";
+    if (n.ok && svgCache[n.id] === undefined) {
+      svgCache[n.id] = null;
+      fetch("cad/" + encodeURIComponent(n.id) + ".svg")
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(new Error(r.status)); })
+        .then(function (t) { landSvg(n.id, t); })
+        .catch(function () { landSvg(n.id, ""); });
+    }
+  }
+
   function paintPanes() {
     var c = cases[cur], mode = state.ui.mode;
     var panes = $("panes");
@@ -180,25 +230,27 @@
     if (mode === "side") {
       $("hdA").textContent = "Brochure plan";
       $("metaA").textContent = c.W + " × " + c.H + " px · 400 dpi";
-      $("cvA").innerHTML = '<div class="sheetbox" style="width:' + c.W + "px;height:" + c.H + 'px">' + planLayer(c) + "</div>";
+      setCanvas("A", '<div class="sheetbox" style="width:' + c.W + "px;height:" + c.H + 'px">' + planLayer(c) + "</div>");
       $("hdB").textContent = "Generated CAD";
       $("metaB").textContent = c.ok ? "vector SVG · mm · walls 250/125 mm" : "not produced";
-      $("cvB").innerHTML = c.ok && svg
+      setCanvas("B", c.ok && svg
         ? '<div class="box" style="width:' + c.W + "px;height:" + c.H + 'px">' + cadBox(c, svg, true, null) + "</div>"
-        : "";
+        : "");
     } else if (mode === "overlay") {
       $("hdA").textContent = "Plan with the CAD laid over it";
       $("metaA").textContent = c.ok ? "registered by the reader's own scale, " + c.overlay.sc.toFixed(2) + " px per inch" : "no CAD to overlay";
-      $("cvA").innerHTML = '<div class="sheetbox" style="width:' + c.W + "px;height:" + c.H + 'px">' +
-        planLayer(c) + (c.ok && svg ? cadBox(c, svg, false, op) : "") + "</div>";
-      if (!c.ok) $("cvA").innerHTML = '<div class="sheetbox" style="width:' + c.W + "px;height:" + c.H + 'px">' + planLayer(c) + "</div>";
+      setCanvas("A", '<div class="sheetbox" style="width:' + c.W + "px;height:" + c.H + 'px">' +
+        planLayer(c) + (c.ok && svg ? cadBox(c, svg, false, op) : "") + "</div>");
+      // The hidden pane must not keep the previous case's drawing alive.
+      setCanvas("B", "");
     } else {
       var showCad = state.ui.flip === "cad" && c.ok;
       $("hdA").textContent = showCad ? "Generated CAD" : "Brochure plan";
       $("metaA").textContent = "press Space to swap";
-      $("cvA").innerHTML = showCad
+      setCanvas("A", showCad
         ? '<div class="box" style="width:' + c.W + "px;height:" + c.H + 'px">' + cadBox(c, svg, true, null) + "</div>"
-        : '<div class="sheetbox" style="width:' + c.W + "px;height:" + c.H + 'px">' + planLayer(c) + "</div>";
+        : '<div class="sheetbox" style="width:' + c.W + "px;height:" + c.H + 'px">' + planLayer(c) + "</div>");
+      setCanvas("B", "");
     }
     applyView("A"); applyView("B");
   }
@@ -209,7 +261,7 @@
   function computeFit(p) {
     var c = cases[cur], r = vp(p).getBoundingClientRect();
     if (!r.width || !r.height) return 1;
-    return Math.min(r.width / c.W, r.height / c.H) * 0.94;
+    return Math.min(r.width / c.W, r.height / c.H) * 0.97;
   }
 
   function fit(p) {
@@ -219,6 +271,7 @@
   }
 
   function fitAll() {
+    dropRects();
     fit("A");
     // Locked panes must share one transform exactly, or the same wall sits at
     // two different screen positions and the comparison is worthless.
@@ -227,10 +280,49 @@
     applyView("A"); applyView("B"); readZoom();
   }
 
+  /* One rAF write per frame, never one per event. A trackpad fires many small
+     wheel events inside a single frame; transforming on each one is what made a
+     page like this unusable on an Intel Iris Plus 645. */
+  var writeQueued = false, gestureTimer = null;
+  var rectCache = { A: null, B: null };
+
+  function vpRect(p) {
+    if (!rectCache[p]) rectCache[p] = vp(p).getBoundingClientRect();
+    return rectCache[p];
+  }
+
+  function dropRects() { rectCache.A = null; rectCache.B = null; }
+
   function applyView(p) {
     var v = views[p];
     if (!v) return;
     cv(p).style.transform = "translate(" + v.x + "px," + v.y + "px) scale(" + v.z + ")";
+  }
+
+  function scheduleWrite() {
+    if (writeQueued) return;
+    writeQueued = true;
+    requestAnimationFrame(function () {
+      writeQueued = false;
+      applyView("A"); applyView("B"); readZoom();
+    });
+  }
+
+  /* will-change pins a compositor layer in video memory, which is the wrong
+     trade when the GPU shares ~1 GB with everything else, so it is on only
+     while a gesture is actually running. Nothing animates when idle. */
+  function gestureOn() {
+    cv("A").classList.add("gesturing");
+    cv("B").classList.add("gesturing");
+    if (gestureTimer) clearTimeout(gestureTimer);
+    gestureTimer = setTimeout(gestureOff, 350);
+  }
+
+  function gestureOff() {
+    if (gestureTimer) { clearTimeout(gestureTimer); gestureTimer = null; }
+    cv("A").classList.remove("gesturing");
+    cv("B").classList.remove("gesturing");
+    dropRects();
   }
 
   function readZoom() {
@@ -242,7 +334,6 @@
     if (!state.ui.lock) return;
     var other = from === "A" ? "B" : "A";
     views[other] = { z: views[from].z, x: views[from].x, y: views[from].y };
-    applyView(other);
   }
 
   function zoomAt(p, factor, cx, cy) {
@@ -254,7 +345,15 @@
     v.x = cx - (cx - v.x) * k;
     v.y = cy - (cy - v.y) * k;
     v.z = z2;
-    applyView(p); mirror(p); readZoom();
+    mirror(p); scheduleWrite();
+  }
+
+  function panBy(p, dx, dy) {
+    var v = views[p];
+    if (!v) return;
+    v.x += dx;
+    v.y += dy;
+    mirror(p); scheduleWrite();
   }
 
   function zoomCentre(factor) {
@@ -273,35 +372,100 @@
     readZoom();
   }
 
+  /* Telling a mouse from a trackpad. A wheel notch is few, large and quantised:
+     integer deltaY, |deltaY| >= 50, no horizontal component, or a non-pixel
+     deltaMode. A trackpad streams many small, often fractional deltas and
+     usually some deltaX. The verdict is latched briefly so one odd event in the
+     middle of a gesture cannot flip modes and jerk the drawing. */
+  var wheelLatch = "mouse", wheelLatchUntil = 0, wheelSeen = null;
+
+  function detectDevice(e) {
+    var now = performance.now();
+    if (now < wheelLatchUntil) { wheelLatchUntil = now + 350; return wheelLatch; }
+    var mouse = e.deltaMode !== 0 ||
+      (e.deltaX === 0 && e.deltaY === Math.round(e.deltaY) && Math.abs(e.deltaY) >= 50);
+    wheelLatch = mouse ? "mouse" : "trackpad";
+    wheelLatchUntil = now + 350;
+    if (wheelSeen !== wheelLatch) { wheelSeen = wheelLatch; paintWheelHint(); }
+    return wheelLatch;
+  }
+
+  /* Heuristics are never perfect, so the guess is overridable and remembered. */
+  function wheelZooms(e) {
+    if (state.ui.wheel === "zoom") return true;
+    if (state.ui.wheel === "pan") return false;
+    return detectDevice(e) === "mouse";
+  }
+
+  function setWheelMode(m) {
+    state.ui.wheel = m;
+    markDirty();
+    paintWheelHint();
+  }
+
+  function paintWheelHint() {
+    var m = state.ui.wheel;
+    var b = $("wheelBtn");
+    if (b) {
+      b.textContent = "Wheel: " + (m === "auto"
+        ? "auto (" + (wheelSeen === "trackpad" ? "panning" : "zoom") + ")"
+        : m === "zoom" ? "zoom" : "pan");
+      b.title = "What a plain scroll does. Auto reads the device; click to pin it.";
+    }
+    var zooms = m === "zoom" || (m === "auto" && wheelSeen !== "trackpad");
+    var h = document.querySelector(".vphint");
+    if (h) h.textContent = zooms
+      ? "pinch or scroll to zoom \u00b7 drag to pan"
+      : "pinch to zoom \u00b7 two fingers to pan";
+    var f = $("gestureKeys");
+    if (f) f.textContent = zooms ? "scroll or pinch zooms" : "pinch zooms, two fingers pan";
+  }
+
   function wireViewport(p) {
     var el = vp(p), drag = null;
 
+    /* A plain wheel event means "zoom" from a mouse and "pan" from a trackpad,
+       and the browser does not say which fired it — see wheelZooms(). ctrlKey
+       always zooms, which covers a trackpad pinch and cmd/ctrl+scroll on both.
+       Both are prevented, so the page never scrolls and the back-swipe gesture
+       can never throw away someone's place mid-review. */
     el.addEventListener("wheel", function (e) {
       e.preventDefault();
-      var r = el.getBoundingClientRect();
-      var d = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
-      zoomAt(p, Math.exp(-d * 0.0022), e.clientX - r.left, e.clientY - r.top);
+      var u = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? el.clientHeight : 1;
+      gestureOn();
+      var pinch = e.ctrlKey;
+      if (pinch || wheelZooms(e)) {
+        var r = vpRect(p);
+        // A pinch sends many small events where a wheel sends few large ones,
+        // so a notch-sized step under a pinch feels violent.
+        var step = pinch ? 0.009 : 0.0022;
+        zoomAt(p, Math.exp(-e.deltaY * u * step), e.clientX - r.left, e.clientY - r.top);
+      } else {
+        panBy(p, -e.deltaX * u, -e.deltaY * u);
+      }
     }, { passive: false });
 
     el.addEventListener("pointerdown", function (e) {
       if (e.button !== 0 && e.pointerType === "mouse") return;
       el.setPointerCapture(e.pointerId);
       el.classList.add("dragging");
+      gestureOn();
       drag = { x: e.clientX, y: e.clientY };
     });
 
     el.addEventListener("pointermove", function (e) {
       if (!drag || !views[p]) return;
-      views[p].x += e.clientX - drag.x;
-      views[p].y += e.clientY - drag.y;
+      var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
       drag = { x: e.clientX, y: e.clientY };
-      applyView(p); mirror(p);
+      gestureOn();
+      panBy(p, dx, dy);
     });
 
     function end(e) {
       if (!drag) return;
       drag = null;
       el.classList.remove("dragging");
+      gestureOff();
       try { el.releasePointerCapture(e.pointerId); } catch (err) { }
     }
     el.addEventListener("pointerup", end);
@@ -392,6 +556,7 @@
     if (i < 0 || i >= cases.length || i === cur) return;
     cur = i;
     var c = cases[cur];
+    releaseFar();
     paintForm();
     renderIndex();
     if (c.ok && svgCache[c.id] === undefined) {
@@ -403,6 +568,7 @@
     }
     paintPanes();
     fitAll();
+    prefetchNeighbour();
   }
 
   function nextUnreviewed() {
@@ -423,11 +589,20 @@
     fitAll();
   }
 
+  function setIndex(v) {
+    state.ui.index = v;
+    $("main").classList.toggle("hide-index", !v);
+    $("indexToggle").textContent = v ? "Hide list" : "Show list";
+    $("indexToggle").setAttribute("aria-pressed", String(v));
+    markDirty();
+    requestAnimationFrame(fitAll);
+  }
+
   function setLock(v) {
     state.ui.lock = v;
     $("lockBtn").setAttribute("aria-pressed", String(v));
     $("lockBtn").textContent = v ? "Panes locked" : "Panes free";
-    if (v) { views.B = { z: views.A.z, x: views.A.x, y: views.A.y }; applyView("B"); }
+    if (v) { views.B = { z: views.A.z, x: views.A.x, y: views.A.y }; applyView("B"); readZoom(); }
     markDirty();
   }
 
@@ -586,6 +761,12 @@
     $("nextBtn").onclick = function () { go(cur + 1); };
     $("todoBtn").onclick = nextUnreviewed;
 
+    $("indexToggle").onclick = function () { setIndex(!state.ui.index); };
+
+    $("wheelBtn").onclick = function () {
+      setWheelMode({ auto: "zoom", zoom: "pan", pan: "auto" }[state.ui.wheel] || "auto");
+    };
+
     $("reviewToggle").onclick = function () {
       state.ui.review = !state.ui.review;
       $("main").classList.toggle("hide-review", !state.ui.review);
@@ -664,6 +845,8 @@
       else if (k === "-" || k === "_") zoomCentre(1 / 1.3);
       else if (k === "0") fitAll();
       else if (k === "9") oneToOne();
+      else if (k === "[") { setIndex(!state.ui.index); }
+      else if (k === "]") { $("reviewToggle").click(); }
       else if (k === "/") { $("notes").focus(); e.preventDefault(); }
       else if (k === "?") $("helpDlg").showModal();
     });
@@ -683,6 +866,9 @@
       buildAbout();
       wire();
       $("main").classList.toggle("hide-review", !state.ui.review);
+      $("reviewToggle").textContent = state.ui.review ? "Hide review" : "Show review";
+      setIndex(state.ui.index !== false);
+      paintWheelHint();
       $("lockBtn").setAttribute("aria-pressed", String(state.ui.lock));
       $("lockBtn").textContent = state.ui.lock ? "Panes locked" : "Panes free";
       $("opacity").value = state.ui.opacity;
