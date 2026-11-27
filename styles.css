@@ -488,6 +488,11 @@ main.hide-review .review { display: none; }
   align-items: baseline;
   gap: 8px;
   padding: 7px 12px;
+  /* a wrapped header would make one viewport shorter than the other, and the
+     two panes would no longer line up */
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
   border-bottom: 1px solid var(--border);
   font-size: 11.5px;
   font-weight: 500;

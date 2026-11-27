@@ -218,7 +218,14 @@
     views[p] = { z: z, x: (r.width - c.W * z) / 2, y: (r.height - c.H * z) / 2 };
   }
 
-  function fitAll() { fit("A"); fit("B"); applyView("A"); applyView("B"); readZoom(); }
+  function fitAll() {
+    fit("A");
+    // Locked panes must share one transform exactly, or the same wall sits at
+    // two different screen positions and the comparison is worthless.
+    if (state.ui.lock) { fitZ.B = fitZ.A; views.B = { z: views.A.z, x: views.A.x, y: views.A.y }; }
+    else fit("B");
+    applyView("A"); applyView("B"); readZoom();
+  }
 
   function applyView(p) {
     var v = views[p];
