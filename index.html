@@ -15,19 +15,8 @@
 <div id="app">
 
   <header class="titleblock">
-    <div class="tb-cell">
-      <div class="tb-title">RoomWalk CAD check
-        <small>Generated drawing vs. the brochure plan it came from</small>
-      </div>
-    </div>
     <div class="tb-cell tb-grow">
-      <div class="tb-k">What you are checking</div>
-      <div class="tb-note">
-        Every drawing here was produced by the <b>classical, no-AI reader</b> &mdash; the code that
-        actually ships. <b>There is no trained model involved:</b> no PlanNet checkpoint exists on
-        disk, and the two toy checkpoints that do are far worse than this reader. So judge the
-        drawing, not a model.
-      </div>
+      <div class="tb-title">RoomWalk CAD check</div>
     </div>
     <div class="tb-cell">
       <div class="tb-k">Checker</div>
@@ -156,8 +145,7 @@
     <button class="chipbtn" id="aboutBtn">About this set</button>
     <span class="spacer"></span>
     <span class="keys">
-      <span>&larr;/&rarr; case</span><span>U next unreviewed</span><span>1/2/3 verdict</span>
-      <span>S/O/F view</span><span>L lock</span><span>scroll = zoom</span><span>/ notes</span><span>? help</span>
+      <span>&larr;/&rarr; case</span><span>1/2/3 verdict</span><span>S/O/F view</span><span>? keys</span>
     </span>
   </footer>
 </div>
@@ -180,6 +168,8 @@
       <tr><td>Esc</td><td>Leave the notes box</td></tr>
       <tr><td>?</td><td>This list</td></tr>
     </table>
+    <p class="note">Drawings are produced by the classical, no-AI reader &mdash; the code that
+      ships. No trained model is involved, so judge the drawing, not a model.</p>
     <p class="note">Everything you type is written to this browser straight away, so a refresh or a
       closed tab loses nothing. It lives only in this browser though &mdash; export the CSV before
       you switch machine or clear your history.</p>

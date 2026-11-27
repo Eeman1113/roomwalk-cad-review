@@ -130,7 +130,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 .tb-cell {
-  padding: 7px 14px;
+  padding: 5px 14px;
   border-right: 1px solid var(--line-soft);
   display: flex;
   flex-direction: column;
@@ -153,34 +153,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .tb-title {
   font-family: var(--sheet);
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: .02em;
   text-transform: uppercase;
   line-height: 1.1;
 }
 
-.tb-title small {
-  display: block;
-  font-family: var(--body);
-  font-size: 11.5px;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--muted);
-}
-
 .tb-grow { flex: 1; }
-
-.tb-note {
-  font-size: 12.5px;
-  color: var(--ink-2);
-  max-width: 62ch;
-  line-height: 1.35;
-  white-space: normal;
-}
-
-.tb-note b { color: var(--ink); font-weight: 600; }
 
 .tb-actions { flex-direction: row; align-items: center; gap: 6px; }
 
@@ -763,10 +743,7 @@ dialog .foot { padding: 10px 16px; border-top: 1px solid var(--line); display: f
 
 @media (max-width: 1240px) {
   main { grid-template-columns: 200px minmax(0, 1fr) 300px; }
-  /* The provenance note is the one thing on this page that must not be lost to
-     a narrow window, so it shrinks rather than disappearing. */
-  .tb-note { font-size: 11.5px; max-width: 52ch; }
-  .tb-title { font-size: 17px; }
+  .tb-title { font-size: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
